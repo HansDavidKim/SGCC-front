@@ -11,7 +11,7 @@
     <h1 class="absolute top-[16px] text-[50px]">
       <span class="font-light">Intro:</span>
       <span class="font-normal"> </span>
-      <span class="font-extrabold text-[64px]">SGCC</span>
+      <span class="font-extrabold text-[64px] font-">SGCC</span>
     </h1>
     <h2 class="absolute top-[169px] leading-[40px] text-center">
       <span class="font-bold text-[24px]">SGCC는 1982년에 우한된 서강대학교 중앙컴퓨터 동아리입니다.</span><br>

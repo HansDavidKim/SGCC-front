@@ -1,135 +1,23 @@
-@import "tailwindcss";
-
-/*한글: light normal medium semibold bold*/
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/fonts/noto-sans-kr-v37-latin-300.woff2') format('woff2');
-  unicode-range: U+1100-11FF, U+302E-302F, U+3130-318F, U+3200-321F, U+3260-327F, U+AC00-D7A3, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/noto-sans-kr-v37-latin-regular.woff2') format('woff2');
-  unicode-range: U+1100-11FF, U+302E-302F, U+3130-318F, U+3200-321F, U+3260-327F, U+AC00-D7A3, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/noto-sans-kr-v37-latin-500.woff2') format('woff2'); 
-  unicode-range: U+1100-11FF, U+302E-302F, U+3130-318F, U+3200-321F, U+3260-327F, U+AC00-D7A3, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/noto-sans-kr-v37-latin-600.woff2') format('woff2'); 
-  unicode-range: U+1100-11FF, U+302E-302F, U+3130-318F, U+3200-321F, U+3260-327F, U+AC00-D7A3, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/noto-sans-kr-v37-latin-700.woff2') format('woff2'); 
-  unicode-range: U+1100-11FF, U+302E-302F, U+3130-318F, U+3200-321F, U+3260-327F, U+AC00-D7A3, U+FF00-FFEF;
-}
-
-
-/*  영어 
-light normal medium semibold bold extrabold
-
-U+0041-005A: 대문자
-U+0061-007A: 소문자
-U+0021-002F: ! " # $ % & ' ( ) * + , - . /
-U+003A-0040: : ; < = > ? @
-*/
-
-@font-face {
-  font-family: 'Inknut Antiqua';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/fonts/inknut-antiqua-v15-latin-300.woff2') format('woff2');
-  unicode-range: U+0041-005A, U+0061-007A, U+0021-002F, U+003A-0040;
-}
-
-@font-face {
-  font-family: 'Inknut Antiqua';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/inknut-antiqua-v15-latin-regular.woff2') format('woff2');
-  unicode-range: U+0041-005A, U+0061-007A, U+0021-002F, U+003A-0040;
-}
-
-@font-face {
-  font-family: 'Inknut Antiqua';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/inknut-antiqua-v15-latin-500.woff2') format('woff2'); 
-  unicode-range: U+0041-005A, U+0061-007A, U+0021-002F, U+003A-0040;
-}
-
-@font-face {
-  font-family: 'Inknut Antiqua';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/inknut-antiqua-v15-latin-600.woff2') format('woff2'); 
-  unicode-range: U+0041-005A, U+0061-007A, U+0021-002F, U+003A-0040;
-}
-
-@font-face {
-  font-family: 'Inknut Antiqua';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/inknut-antiqua-v15-latin-700.woff2') format('woff2'); 
-  unicode-range: U+0041-005A, U+0061-007A, U+0021-002F, U+003A-0040;
-}
-
-
-@font-face {
-  font-family: 'Inknut Antiqua';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/fonts/inknut-antiqua-v15-latin-800.woff2') format('woff2'); 
-  unicode-range: U+0041-005A, U+0061-007A, U+0021-002F, U+003A-0040;
-}
-
-/*  숫자
-U+0030-0039: 0~9
-*/
-@font-face {
-  font-family: 'Inknut Antiqua Digits';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/fonts/inknut-antiqua-v15-latin-800.woff2') format('woff2'); 
-  unicode-range: U+0030-0039;
-}
-
-body {
-  font-family: 'Inknut Antiqua', 'Inknut Antiqua Digits', 'Noto Sans KR', serif, sans-serif;
-}
+@import 'tailwindcss';
 
 /*
-.inknut-antiqua-font {
-  font-family: "Inknut Antiqua", serif;
-  font-style: normal;
-}
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
 */
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Sogang';
+  src: url('/fonts/SOGANG_UNIVERSITY_for_windows.ttf') format('truetype');
+}
