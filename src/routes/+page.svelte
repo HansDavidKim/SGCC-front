@@ -1,6 +1,5 @@
 <script lang="ts">
-  import ImageSlider from '$lib/components/ImageSlider.svelte' 
-
+  import { ImageSlider } from '$lib';
 </script>
 
 <main>
@@ -9,9 +8,9 @@
 
   <div class="flex relative bg-white h-[897px] justify-center">
     <h1 class="absolute top-[16px] text-[50px]">
-      <span class="font-light">Intro:</span>
+      <span class="font-['Sogang'] font-light">Intro:</span>
       <span class="font-normal"> </span>
-      <span class="font-extrabold text-[64px] font-">SGCC</span>
+      <span class="font-['Sogang'] font-extrabold text-[64px] font-">SGCC</span>
     </h1>
     <h2 class="absolute top-[169px] leading-[40px] text-center">
       <span class="font-bold text-[24px]">SGCC는 1982년에 우한된 서강대학교 중앙컴퓨터 동아리입니다.</span><br>
@@ -19,7 +18,7 @@
       부원의 능력을 끌어 올리는 것을 목표로 노력 하고있습니다.</span></h2>
 
     <iframe class="absolute top-[306px] left-1/2 -translate-x-1/2 w-[936px] h-[523px]"
-    src="https://www.youtube.com/watch?v=o4HPzbwx_Xk" 
+    src="https://www.youtube.com/embed/aNXoTecZR_Q?si=HwcoeDNlIVdFLqPb" 
     title="God Chang-seop (신창섭) &#39;바로 리부트 정상화&#39; MV" frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

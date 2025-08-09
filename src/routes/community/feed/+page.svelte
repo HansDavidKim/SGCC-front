@@ -1,6 +1,6 @@
 <script lang="ts">
-    import PostCard from "$lib/components/PostCard.svelte";
-    import type { PageData } from "./$types";
+    import { PostCard } from '$lib';
+    import type { PageData } from './$types';
 
     export let data: PageData;
     $: slicedPostSummary = data.slicedPostSummary;
@@ -26,7 +26,7 @@
 </script>
 
 <div class="flex justify-center">
-    <div class="flex flex-col max-w-3xl">
+    <div class="flex flex-col max-w-5xl">
         {#each slicedPostSummary as data}
             <PostCard {data} />
         {/each}

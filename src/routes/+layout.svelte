@@ -2,10 +2,12 @@
     let { children } = $props();
     import "../app.css";
 
-    import Header from "$lib/components/Header.svelte"
-    import Footer from "$lib/components/Footer.svelte"
+    import { Header } from "$lib";
+    import { Footer } from "$lib";
   </script>
   
-  <Header/>
-  {@render children()}
-  <Footer/>
+  <div class="font-['Pretendard']">
+    <Header/>
+      {@render children()}
+    <Footer/>
+  </div>

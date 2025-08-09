@@ -18,6 +18,6 @@ http://scripts.sil.org/OFL
 }
 
 @font-face {
-  font-family: 'Sogang';
-  src: url('/fonts/SOGANG_UNIVERSITY_for_windows.ttf') format('truetype');
+	font-family: 'Sogang';
+	src: url('/fonts/SOGANG_UNIVERSITY_for_windows.ttf') format('truetype');
 }

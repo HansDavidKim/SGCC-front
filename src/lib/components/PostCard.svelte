@@ -4,7 +4,7 @@
     export let data: PostSummary;
 </script>
 
-<a href="./" class="flex h-50 items-center" aria-label="Post Card">
+<a href="./" class="flex h-40 items-center" aria-label="Post Card">
     <div class="w-40 h-30 m-4 flex-shrink-0 overflow-hidden">
         <img
             src={data.thumbnailUrl}

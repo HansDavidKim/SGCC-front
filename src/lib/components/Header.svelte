@@ -19,17 +19,17 @@
             <img src={SogangLogo} alt="Logo">
         </a>
         <div class="h-full w-[135px]">
-            <span class="absolute top-[-7px] left-[89px] text-[40px] text-white font-bold">SGCC</span>
-            <span class="absolute top-[42px] left-[89px] text-[8px] text-white font-light">Sogang computer club</span>
+            <span class="absolute top-[-7px] left-[89px] text-[40px] text-white font-['Sogang'] font-bold">SGCC</span>
+            <span class="absolute top-[42px] left-[89px] text-[8px] text-white font-['Sogang'] font-light">Sogang computer club</span>
         </div>
         
         <div class="mx-auto h-full">
-            <div class="hidden xl:flex h-full ml-5 font-normal text-[16px]"
+            <div class="hidden xl:flex h-full ml-5 font-['Sogang'] text-[16px]"
                  on:mouseover={toggleMenu}
                  on:focus={toggleMenu}
                  on:mouseout={toggleMenu} 
                  on:blur={toggleMenu} role="navigation">
-                <a href="aboutus" class="flex items-center justify-center w-[170px] text-white hover:text-gray-600">About Us</a>
+                <a href="about-us" class="flex items-center justify-center w-[170px] text-white hover:text-gray-600">About Us</a>
                 <a href="notice" class="flex items-center justify-center w-[166px] text-white hover:text-gray-600">Notice</a>
                 <a href="community" class="flex items-center justify-center w-[166px] text-white hover:text-gray-600">Community</a>
                 <a href="study" class="flex items-center justify-center w-[158px] text-white hover:text-gray-600">Study</a>
@@ -38,7 +38,7 @@
         </div>
         
         <!-- pt-1 -->
-        <a href="login" class="hidden xl:flex pt-1 mx-[45px] w-[110px] h-[41px] text-white font-light text-[16px] focus:outline-none border-[1px] border-[#AE1F1F] rounded-full hover:text-gray-600 items-center justify-center">LOG-IN</a>
+        <a href="login" class="hidden xl:flex pt-1 mx-[45px] w-[110px] h-[41px] text-white font-['Sogang'] font-light text-[16px] focus:outline-none border-[2px] border-[#AE1F1F] rounded-full hover:text-gray-600 items-center justify-center">LOG-IN</a>
         
         <div class="absolute top-full left-0 right-0 mt-0 bg-white shadow-lg py-6 z-10 transition-all" class:hidden={!isMenuOpen}>
             <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
