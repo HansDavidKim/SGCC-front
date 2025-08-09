@@ -15,7 +15,7 @@
 
 <header>
     <nav class="flex relative items-center h-[70px] bg-black px-[45px] z-20">
-        <a href="https://www.youtube.com/@codingapple" target="_blank" class="absolute flex-shrink-0 left-[45px] w-[36px]">
+        <a href="/" class="absolute flex-shrink-0 left-[45px] w-[36px]">
             <img src={SogangLogo} alt="Logo">
         </a>
         <div class="h-full w-[135px]">

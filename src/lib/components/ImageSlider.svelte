@@ -29,7 +29,7 @@
 
 <div class="relative w-full mx-auto overflow-hidden bg-black">
     <div class="h-[580px] ">
-      <img src={images[imageIndex]} alt={`Slide ${imageIndex + 1}`} class="w-full h-full object-cover rounded-xl" />
+      <img src={images[imageIndex]} alt={`Slide ${imageIndex + 1}`} class="w-full h-full object-cover" />
       <div class="absolute inset-x-0 top-0 h-[20px] bg-gradient-to-b from-gray-200/10 to-transparent"></div>
       <div class="absolute inset-x-0 bottom-0 h-[20px] bg-gradient-to-t from-gray-200/10 to-transparent"></div>
       <div class="absolute inset-y-0 left-0 w-[20px] bg-gradient-to-r from-gray-200/10 to-transparent"></div>

@@ -20,6 +20,6 @@
 
         <!-- aria-label은 어떻게 처리할 것인지 -->
         <a href="find" aria-label="find" class="absolute top-[1016px] left-[1147px] text-[20px] text-[#807E7E] font-semibold">아이디/비밀번호 찾기</a>
-        <a href="signup" aria-label="signup" class="absolute top-[1016px] left-[1363px] text-[20px] text-[#807E7E] font-semibold">회원가입 하기</a>
+        <a href="sign-up" aria-label="signup" class="absolute top-[1016px] left-[1363px] text-[20px] text-[#807E7E] font-semibold">회원가입 하기</a>
     </div>
 </main>
