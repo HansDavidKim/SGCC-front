@@ -24,19 +24,20 @@
         return _navArray;
     }
 </script>
-
-<div class="flex justify-center">
-    <div class="flex flex-col max-w-5xl">
-        {#each slicedPostSummary as data}
-            <PostCard {data} />
-        {/each}
+<main>
+    <div class="flex justify-center">
+        <div class="flex flex-col max-w-5xl">
+            {#each slicedPostSummary as data}
+                <PostCard {data} />
+            {/each}
+        </div>
     </div>
-</div>
 
-<nav class="flex justify-center gap-x-4 my-4">
-    <a href="?page={currentPage - 1}">이전</a>
-    {#each navArray as n}
-        <a href="?page={n}" class:font-bold={n === currentPage}>{n}</a>
-    {/each}
-    <a href="?page={currentPage + 1}">다음</a>
-</nav>
+    <nav class="flex justify-center gap-x-4 my-4">
+        <a href="?page={currentPage - 1}">이전</a>
+        {#each navArray as n}
+            <a href="?page={n}" class:font-bold={n === currentPage}>{n}</a>
+        {/each}
+        <a href="?page={currentPage + 1}">다음</a>
+    </nav>
+</main>

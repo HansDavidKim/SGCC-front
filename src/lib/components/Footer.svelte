@@ -4,7 +4,7 @@
 
 <footer>
     <div class="h-[472px] flex relative bg-[#B70005] [&>*]:text-white text-[20px] font-medium">
-        <p class="absolute top-[68px] left-[43px]">Made By SGCC</p>
+        <p class="font-['Sogang'] absolute top-[68px] left-[43px]">Made By SGCC</p>
         <hr class="border-t-[3px] absolute top-[120px] left-[43px] right-[43px] border-white">
         <!-- leading 문제..... -->
         <p class="absolute top-[133px] left-[46px] leading-[50px]"> 
