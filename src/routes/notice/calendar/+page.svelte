@@ -1,3 +1,3 @@
 <main class="flex justify-center items-center h-250">
-    <iframe src="https://calendar.google.com/calendar/embed?src=c30cbca39ae255c463f0b5f0a25b9381b03ea011f5185e8022eb43b70260a07e%40group.calendar.google.com&ctz=UTC" class="border-0" width="1200" height="900" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?height=900&wkst=2&ctz=Asia%2FSeoul&showCalendars=0&mode=MONTH&src=YzMwY2JjYTM5YWUyNTVjNDYzZjBiNWYwYTI1YjkzODFiMDNlYTAxMWY1MTg1ZTgwMjJlYjQzYjcwMjYwYTA3ZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238e24aa" class="border-0 rounded-xl" width="1200" height="900" frameborder="0" scrolling="no"></iframe>
 </main>
