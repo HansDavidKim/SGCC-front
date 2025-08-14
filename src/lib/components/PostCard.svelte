@@ -1,10 +1,10 @@
 <script lang="ts">
-    import type { PostSummary } from "$lib/types/index.ts";
+    import type { PostSummary } from '$lib';
 
     export let data: PostSummary;
 </script>
 
-<a href="./" class="flex h-40 items-center" aria-label="Post Card">
+<a href={data.url} class="flex h-40 items-center w-full" aria-label="Post Card">
     <div class="w-40 h-30 m-4 flex-shrink-0 overflow-hidden">
         <img
             src={data.thumbnailUrl}
@@ -19,6 +19,7 @@
         </div>
         <div class="text-xs">
             <span>{data.author}</span>
+            <span>·</span>
             <span>{data.publishedAt}</span>
         </div>
     </div>

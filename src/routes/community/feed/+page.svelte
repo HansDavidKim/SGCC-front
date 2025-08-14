@@ -24,9 +24,10 @@
         return _navArray;
     }
 </script>
+
 <main>
     <div class="flex justify-center">
-        <div class="flex flex-col max-w-5xl">
+        <div class="flex flex-col w-250">
             {#each slicedPostSummary as data}
                 <PostCard {data} />
             {/each}
