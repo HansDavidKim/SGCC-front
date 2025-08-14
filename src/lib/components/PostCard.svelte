@@ -14,10 +14,10 @@
     </div>
     <div class="h-30 flex flex-col justify-between">
         <div>
-            <h2 class="text-xl font-bold line-clamp-1">{data.title}</h2>
-            <p class="text-sm line-clamp-3">{data.excerpt}</p>
+            <h2 class="text-xl font-bold line-clamp-1 text-white">{data.title}</h2>
+            <p class="text-sm text-white line-clamp-3">{data.excerpt}</p>
         </div>
-        <div class="text-xs">
+        <div class="text-xs text-white">
             <span>{data.author}</span>
             <span>·</span>
             <span>{data.publishedAt}</span>

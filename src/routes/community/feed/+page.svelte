@@ -26,19 +26,21 @@
 </script>
 
 <main>
-    <div class="flex justify-center">
-        <div class="flex flex-col w-250">
-            {#each slicedPostSummary as data}
-                <PostCard {data} />
-            {/each}
+    <div class="bg-gray-900">
+        <div class="flex justify-center">
+            <div class="flex flex-col w-250">
+                {#each slicedPostSummary as data}
+                    <PostCard {data} />
+                {/each}
+            </div>
         </div>
-    </div>
 
-    <nav class="flex justify-center gap-x-4 my-4">
-        <a href="?page={currentPage - 1}">이전</a>
-        {#each navArray as n}
-            <a href="?page={n}" class:font-bold={n === currentPage}>{n}</a>
-        {/each}
-        <a href="?page={currentPage + 1}">다음</a>
-    </nav>
+        <nav class="flex justify-center gap-x-4 py-3">
+            <a href="?page={currentPage - 1}" class="text-white">이전</a>
+            {#each navArray as n}
+                <a href="?page={n}" class="text-white" class:font-bold={n === currentPage}>{n}</a>
+            {/each}
+            <a href="?page={currentPage + 1}" class="text-white">다음</a>
+        </nav>
+    </div>
 </main>
