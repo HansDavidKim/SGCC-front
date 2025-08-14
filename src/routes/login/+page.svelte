@@ -7,10 +7,10 @@
     <div class="flex relative h-[1271px] bg-black text-white justify-center">
         <h1 class="absolute top-[234px] text-[50px] text-center font-semibold">LOG - IN</h1>
         <!-- padding을 몇으로 할 것인지? 텍스트 크기는 몇으로 할 것인지? -->
-        <h2 class="absolute top-[326px] left-[441px] text-[36px] font-light">ID</h2>
+        <h2 class="absolute top-[326px] w-[1024px] text-[36px] font-light">ID</h2>
         <input class="absolute w-[1038px] h-[131px] top-[411px] px-5 text-[50px] border-[#AE1F1F] border-[5px] rounded-[50px] focus:outline-none">
 
-        <h2 class="absolute top-[617px] left-[441px] text-[36px] font-light">PASSWORD</h2>
+        <h2 class="absolute top-[617px] w-[1024px] text-[36px] font-light">PASSWORD</h2>
         <input class="absolute w-[1038px] h-[131px] top-[702px] px-5 text-[50px] border-[#AE1F1F] border-[5px] rounded-[50px] focus:outline-none">
     
     

@@ -1,67 +1,98 @@
 <script lang="ts">
+    import MobileMenu from '$lib/components/Menu.svelte'
     import SogangLogo from '$lib/assets/images/sogang-logo.png'
+
     const mobileMenuIcon = "https://png.pngtree.com/element_our/20190602/ourmid/pngtree-white-laptop-illustration-image_1412935.jpg"
-        
     let isMobileMenuOpen: boolean = false;
+
     const toggleMobileMenu = () => {
         isMobileMenuOpen = !isMobileMenuOpen;
-    }
-
-    let isMenuOpen: boolean = false;
-    const toggleMenu = () => {
-        isMenuOpen = !isMenuOpen;
     }
 </script>
 
 <header>
     <nav class="flex relative items-center h-[70px] bg-black px-[45px] z-20">
-        <a href="https://www.youtube.com/@codingapple" target="_blank" class="absolute flex-shrink-0 left-[45px] w-[36px]">
-            <img src={SogangLogo} alt="Logo">
-        </a>
-        <div class="h-full w-[135px]">
-            <span class="absolute top-[-7px] left-[89px] text-[40px] text-white font-bold">SGCC</span>
-            <span class="absolute top-[42px] left-[89px] text-[8px] text-white font-light">Sogang computer club</span>
-        </div>
         
-        <div class="mx-auto h-full">
-            <div class="hidden xl:flex h-full ml-5 font-normal text-[16px]"
-                 on:mouseover={toggleMenu}
-                 on:focus={toggleMenu}
-                 on:mouseout={toggleMenu} 
-                 on:blur={toggleMenu} role="navigation">
-                <a href="aboutus" class="flex items-center justify-center w-[170px] text-white hover:text-gray-600">About Us</a>
-                <a href="notice" class="flex items-center justify-center w-[166px] text-white hover:text-gray-600">Notice</a>
-                <a href="community" class="flex items-center justify-center w-[166px] text-white hover:text-gray-600">Community</a>
-                <a href="study" class="flex items-center justify-center w-[158px] text-white hover:text-gray-600">Study</a>
-                <a href="library" class="flex items-center justify-center w-[126px] text-white hover:text-gray-600">Library</a>
+        <!-- 로고 + SGCC 묶음 (왼쪽 고정) -->
+        <div class="flex items-center absolute left-[45px]">
+            <a href="/" target="_self" class="flex-shrink-0 w-[36px]">
+                <img src={SogangLogo} alt="Logo">
+            </a>
+            <a href="/" aria-label="Main Menu" class="flex flex-col justify-center ml-[8px] h-full">
+                <span class="text-[40px] text-white font-bold leading-none">SGCC</span>
+                <span class="text-[8px] text-white font-light">Sogang computer club</span>
+            </a>
+        </div>
+
+        <!-- 중앙 메뉴 (화면 절대 중앙) -->
+        <div class="group h-full absolute left-1/2 -translate-x-1/2">
+            <div class="hidden xl:flex h-full font-normal text-[16px]" role="navigation">
+                <a href="/aboutus"   class="relative flex items-center justify-center w-[170px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">About Us</a>
+                <a href="/notice"    class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Notice</a>
+                <a href="/community" class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Community</a>
+                <a href="/study"     class="relative flex items-center justify-center w-[158px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Study</a>
+                <a href="/library"   class="relative flex items-center justify-center w-[126px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Library</a>
             </div>
-        </div>
-        
-        <!-- pt-1 -->
-        <a href="login" class="hidden xl:flex pt-1 mx-[45px] w-[110px] h-[41px] text-white font-light text-[16px] focus:outline-none border-[1px] border-[#AE1F1F] rounded-full hover:text-gray-600 items-center justify-center">LOG-IN</a>
-        
-        <div class="absolute top-full left-0 right-0 mt-0 bg-white shadow-lg py-6 z-10 transition-all" class:hidden={!isMenuOpen}>
-            <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 space-x-30">
-                    <div>
-                        <h3 class="text-sm font-medium text-gray-500 tracking-wide uppercase">정보</h3>
-                        <ul class="mt-4 space-y-4">
-                            <li><a href="a" class="block text-base font-medium text-gray-900 hover:text-gray-700">정보입니다</a></li>
-                            <li><a href="b" class="block text-base font-medium text-gray-900 hover:text-gray-700">정보입니다</a></li>
-                            <li><a href="c" class="block text-base font-medium text-gray-900 hover:text-gray-700">정보입니다</a></li>
+            
+            <!-- 드롭다운 메뉴 -->
+            <div class="absolute top-full left-1/2 bg-black shadow-lg py-8 z-10 
+            opacity-0 invisible transform -translate-x-1/2 w-screen translate-y-[-10px] transition-all duration-300
+            group-hover:opacity-90 group-hover:visible group-hover:translate-y-0">
+                <div class="flex justify-center text-center mx-5">
+                    <!-- About Us -->
+                    <div class="w-[170px] px-4">
+                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">About Us</h3>
+                        <ul class="space-y-3">
+                            <li><a href="/aboutus/activity" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">활동</a></li>
+                            <li><a href="/aboutus/SNS"      class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">SNS</a></li>
+                            <li><a href="/aboutus/calendar" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">일정</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h3 class="text-sm font-medium text-gray-500 tracking-wide uppercase">가이드</h3>
-                        <ul class="mt-4 space-y-4">
-                            <li><a href="d" class="block text-base font-medium text-gray-900 hover:text-gray-700">가이드입니다</a></li>
-                            <li><a href="e" class="block text-base font-medium text-gray-900 hover:text-gray-700">가이드입니다</a></li>
-                            <li><a href="f" class="block text-base font-medium text-gray-900 hover:text-gray-700">가이드입니다</a></li>
+                    <!-- Notice -->
+                    <div class="w-[166px] px-4">
+                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Notice</h3>
+                        <ul class="space-y-3">
+                            <li><a href="announcements" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">공지사항</a></li>
+                            <li><a href="news"          class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">뉴스</a></li>
+                            <li><a href="press"         class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">보도자료</a></li>
+                            <li><a href="events"        class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">이벤트</a></li>
+                        </ul>
+                    </div>
+                    <!-- Community -->
+                    <div class="w-[166px] px-4">
+                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Community</h3>
+                        <ul class="space-y-3">
+                            <li><a href="forum"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">토론 게시판</a></li>
+                            <li><a href="qna"       class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">Q&A</a></li>
+                            <li><a href="reviews"   class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">후기</a></li>
+                            <li><a href="gallery"   class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">갤러리</a></li>
+                        </ul>
+                    </div>
+                    <!-- Study -->
+                    <div class="w-[158px] px-4">
+                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Study</h3>
+                        <ul class="space-y-3">
+                            <li><a href="courses"       class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">강좌</a></li>
+                            <li><a href="tutorials"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">튜토리얼</a></li>
+                            <li><a href="resources"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">학습 자료</a></li>
+                            <li><a href="certification" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">인증</a></li>
+                        </ul>
+                    </div>
+                    <!-- Library -->
+                    <div class="w-[126px] px-4">
+                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Library</h3>
+                        <ul class="space-y-3">
+                            <li><a href="documents" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">문서</a></li>
+                            <li><a href="downloads" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">다운로드</a></li>
+                            <li><a href="api-docs"  class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">API 문서</a></li>
+                            <li><a href="guides"    class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">가이드</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+        <a href="login" class="hidden absolute right-[45px] xl:flex pt-1 mx-[45px] w-[110px] h-[41px] text-white font-light text-[16px] focus:outline-none border-[1px] border-[#AE1F1F] rounded-full hover:text-gray-600 items-center justify-center">LOG-IN</a>
 
         <div class="xl:hidden ml-auto">
             <button on:click={toggleMobileMenu} class="p-1 text-white focus:outline-none rounded-md">
@@ -69,21 +100,22 @@
             </button>
         </div>
     </nav>
-    
-    <div
-        class="absolute top-0 right-0 h-screen w-64 py-4 bg-black text-white text-lg text-center z-30
-            transform transition-transform duration-300 ease-out xl:hidden
-            data-[state=open]:translate-x-0 data-[state=closed]:translate-x-full data-[state=open]:pointer-events-auto data-[state=closed]:pointer-events-none"
-        class:translate-x-0={isMobileMenuOpen}
-        class:translate-x-full={!isMobileMenuOpen} class:pointer-events-auto={isMobileMenuOpen}
+
+    <button
+        class="fixed inset-0 z-40 bg-black/50 transition-opacity duration-300"
+        class:opacity-100={isMobileMenuOpen}
+        class:opacity-0={!isMobileMenuOpen}
+        class:pointer-events-auto={isMobileMenuOpen}
         class:pointer-events-none={!isMobileMenuOpen}
-        class:hidden={!isMobileMenuOpen}>
-        
-        <button on:click={toggleMobileMenu}>
-            <img src="https://yt3.googleusercontent.com/ytc/AIdro_nwJ1atCtmd4bkIhKvnjnY0cVqehB44xMmyVJmSFqXiJ8c=s160-c-k-c0x00ffffff-no-rj" alt="Oof!">
-        </button>
-        <a href="h" class="block py-2 hover:bg-[#6a6c7e] transition duration-200" on:click={toggleMobileMenu}>Home</a>
-        <a href="i" class="block py-2 hover:bg-[#6a6c7e] transition duration-200" on:click={toggleMobileMenu}>Home</a>
-        <a href="j" class="block py-2 hover:bg-[#6a6c7e] transition duration-200" on:click={toggleMobileMenu}>Home</a>
-    </div>
+        on:click={toggleMobileMenu}
+        aria-label="Close menu">
+    </button>
+
+    <aside
+        class="fixed top-0 right-0 z-50 w-64 h-full bg-black text-white text-lg text-center
+         transform transition-transform duration-300 ease-out xl:hidden"
+        class:translate-x-full={!isMobileMenuOpen}
+        class:translate-x-0={isMobileMenuOpen}>
+        <MobileMenu />
+    </aside>
 </header>
