@@ -17,7 +17,7 @@
         </p>
         
         <!-- 글자 크기와 컨테이너 크기 고려.... -->
-        <p class="absolute top-[139px] right-[43px] text-[20px] text-center">2025 버전 제작자</p>
+        <p class="absolute top-[139px] right-[43px] text-[20px] text-center">2025 Ver. Created by</p>
         <p class="absolute top-[190px] right-[43px] text-[20px] text-center">김대원 김주희 정주원 조인영 허완</p>
         <!-- top 임의 조정 -->
         <img src={Icons} alt='sns!' class="absolute w-[128px] top-[200px] right-[43px]">

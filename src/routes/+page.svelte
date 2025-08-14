@@ -6,15 +6,15 @@
   <!-- rounded-lg shadow-xl -->
   <ImageSlider/>
 
-  <div class="flex relative bg-white h-[897px] justify-center">
+  <div class="flex relative bg-zinc-900 h-[897px] justify-center">
     <h1 class="absolute top-[16px] text-[50px]">
-      <span class="font-['Sogang'] font-light">Intro:</span>
+      <span class="font-['Sogang'] font-light text-white">Intro:</span>
       <span class="font-normal"> </span>
-      <span class="font-['Sogang'] font-extrabold text-[64px]">SGCC</span>
+      <span class="font-['Sogang'] font-extrabold text-[64px] text-white">SGCC</span>
     </h1>
     <h2 class="absolute top-[169px] leading-[40px] text-center">
-      <span class="font-bold text-[24px]">SGCC는 1982년에 우한된 서강대학교 중앙컴퓨터 동아리입니다.</span><br>
-      <span class="font-light text-[20px]">Python, C언어 등 기본 프로그래밍 언어 콘서트 뿐만 아니라 유니티, 언리얼 엔진, 웹, 등 다양한 분야에서 스터디를 처리하며<br>
+      <span class="font-bold text-[24px] text-white">SGCC는 1982년에 우한된 서강대학교 중앙컴퓨터 동아리입니다.</span><br>
+      <span class="font-light text-[20px] text-white">Python, C언어 등 기본 프로그래밍 언어 콘서트 뿐만 아니라 유니티, 언리얼 엔진, 웹, 등 다양한 분야에서 스터디를 처리하며<br>
       부원의 능력을 끌어 올리는 것을 목표로 노력 하고있습니다.</span></h2>
 
     <iframe class="absolute top-[306px] left-1/2 -translate-x-1/2 w-[936px] h-[523px]"
@@ -53,14 +53,14 @@
     <a href="a" class="flex absolute top-[1617px] w-[234px] h-[67px] items-center justify-center bg-[#AE1F1F] rounded-full text-[32px] font-semibold">더 알아보기</a>
   </div>
 
-  <div class="flex relative bg-white h-[957px] justify-center">
-    <p class="absolute top-[68px] text-center text-[50px] font-semibold">RECRUITING</p>
-    <p class="absolute top-[147px] text-center text-[20px] leading-[40px] font-light">
+  <div class="flex relative bg-zinc-900 h-[957px] justify-center">
+    <p class="absolute top-[68px] text-center text-[50px] font-semibold text-white">RECRUITING</p>
+    <p class="absolute top-[147px] text-center text-[20px] leading-[40px] font-light text-white">
       컴퓨터와 기술을 좋아하고, 새로운 것을 배우는 데 즐거움을 느끼는 사람을 찾습니다.<br>
       함께 프로젝트를 만들고, 서로의 아이디어를 나누며 성장해나갈 여러분을 기다립니다.
     </p>
 
-    <img class="absolute top-[306px] w-[1160px] h-[439px] bg-gray-300 object-contain" src="https://give.sogang.ac.kr/resources/_Img/content/campus-map.jpg" alt="포스터">
+    <img class="absolute top-[306px] w-250 h-120 bg-gray-300 object-cover" src="https://give.sogang.ac.kr/resources/_Img/content/campus-map.jpg" alt="포스터">
     <a href="a" class="flex absolute top-[855px] w-[234px] h-[67px] items-center justify-center bg-[#AE1F1F] rounded-full text-[32px] text-white font-semibold">지원하기</a>
   </div>
 
