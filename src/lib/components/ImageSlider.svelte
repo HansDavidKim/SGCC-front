@@ -28,12 +28,8 @@
 </script>
 
 <div class="relative w-full mx-auto overflow-hidden bg-black">
-    <div class="h-[580px] ">
+    <div class="h-[calc(100vh-70px)]">
       <img src={images[imageIndex]} alt={`Slide ${imageIndex + 1}`} class="w-full h-full object-contain rounded-xl" />
-      <div class="absolute inset-x-0 top-0 h-[20px] bg-gradient-to-b from-gray-200/10 to-transparent"></div>
-      <div class="absolute inset-x-0 bottom-0 h-[20px] bg-gradient-to-t from-gray-200/10 to-transparent"></div>
-      <div class="absolute inset-y-0 left-0 w-[20px] bg-gradient-to-r from-gray-200/10 to-transparent"></div>
-      <div class="absolute inset-y-0 right-0 w-[20px] bg-gradient-to-l from-gray-200/10 to-transparent"></div>
     </div>
 
     <button
@@ -52,7 +48,7 @@
       </svg>
     </button>
 
-    <div class="absolute top-[540px] left-1/2 transform -translate-x-1/2 flex space-x-[19px] [&>*]:hover:cursor-pointer [&>*]:rounded-full">
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-[19px] [&>*]:hover:cursor-pointer [&>*]:rounded-full">
       <button
         class="w-[16px] h-[16px] border-[4px] border-[#AE1F1F] focus:outline-none"
         class:bg-white={imageIndex === 0}

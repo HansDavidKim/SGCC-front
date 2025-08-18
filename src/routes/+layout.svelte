@@ -6,6 +6,6 @@
     import Footer from "../Components/Footer.svelte"
   </script>
   
-  <Header/>
-  {@render children()}
-  <Footer/>
+<Header />
+{@render children()}
+<Footer />
