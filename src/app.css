@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 /*
 Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.

@@ -11,7 +11,7 @@ export interface PostSummary {
 export interface MediaSummary {
     id: number;
     title: string;
-    description: string;
+    content: string;
     date: string;
     thumbnailUrl: string;
 }

@@ -1,28 +1,15 @@
 <script lang="ts">
     import { PostCard } from '$lib';
     import type { PageData } from './$types';
+    import { makeNavArray } from '$lib';
+
+    const NAV_LENGTH: number = 5;
 
     export let data: PageData;
     $: slicedPostSummary = data.slicedPostSummary;
     $: currentPage = data.currentPage;
     $: totalPages = data.totalPages;
-    $: navArray = makeNavArray(currentPage);
-
-    const NAV_LENGTH: number = 5;
-
-    function makeNavArray(_currentPage: number): number[] {
-        let _navArray: number[] = [];
-
-        for (let i = 1; i < NAV_LENGTH + 1; i++) {
-            _navArray.push(
-                Math.floor((_currentPage - 1) / NAV_LENGTH) * NAV_LENGTH + i,
-            );
-        }
-
-        _navArray = _navArray.filter((n) => n <= totalPages);
-
-        return _navArray;
-    }
+    $: navArray = makeNavArray(currentPage, totalPages, NAV_LENGTH);
 </script>
 
 <main>
