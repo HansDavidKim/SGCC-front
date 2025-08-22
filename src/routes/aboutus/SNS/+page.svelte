@@ -5,8 +5,8 @@
 
 <main>
 
-  <div class="flex relative justify-center bg-black h-[1487px] text-white">
-    <h2 class="absolute top-[79px] text-[50px] font-semibold text-center">SNS</h2>
+  <div class="flex flex-col py-20 relative items-center bg-black h-[1487px] text-white">
+    <h2 class="text-[50px] font-semibold text-center">SNS</h2>
     <p class="absolute top-[198px] text-[20px] leading-[40px] font-light text-center">
       SGCC는 INSTAGRAM 공식 계정을 통해 다양한 활동 내용들을 SNS를 통해 공유하고 있습니다.<br>
       이외에도 신규 회원 모집 및 예정된 활동 등 여러 공지 사항 또한 전달하고 있습니다.<br>

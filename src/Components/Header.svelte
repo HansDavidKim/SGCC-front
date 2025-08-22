@@ -101,8 +101,9 @@
         </div>
     </nav>
 
+<!--
     <hr class="border-t-[1px] border-[#D9D9D9]">
-
+-->
     <button
         class="fixed inset-0 z-40 bg-black/50 transition-opacity duration-300"
         class:opacity-100={isMobileMenuOpen}

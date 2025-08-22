@@ -5,8 +5,8 @@
 
 <main>
   <div class="flex relative justify-center bg-black h-[1437px] text-white">
-    <h2 class="absolute top-[118px] text-[50px] font-semibold text-center">인사말</h2>
-    <p class="absolute top-[262px] text-[20px] leading-[40px] font-medium text-center">
+    <h2 class="absolute top-[118px] text-[45px] font-semibold text-center">인사말</h2>
+    <p class="absolute top-[262px] text-[18px] leading-[40px] font-medium text-center">
       SGCC는 1982년에 창립된 "컴퓨터"라는 공통 관심사를 가진 사람들이 모인 서강대학교 유일의 중앙 컴퓨터 동아리입니다.<br>
       SGCC는 컴퓨터에 관한 모든 주제에 대해 환영하는 소통의 장으로서, 약 40년 간의 역사를 이어가고 있습니다.<br>
       <br>

@@ -4,22 +4,37 @@
 </script>
 
 <main>
-    <div class="flex relative h-[1271px] bg-black text-white justify-center">
-        <h1 class="absolute top-[234px] text-[50px] text-center font-semibold">LOG - IN</h1>
-        <!-- padding을 몇으로 할 것인지? 텍스트 크기는 몇으로 할 것인지? -->
-        <h2 class="absolute top-[326px] w-[1024px] text-[36px] font-light">ID</h2>
-        <input class="absolute w-[1038px] h-[131px] top-[411px] px-5 text-[50px] border-[#AE1F1F] border-[5px] rounded-[50px] focus:outline-none">
-
-        <h2 class="absolute top-[617px] w-[1024px] text-[36px] font-light">PASSWORD</h2>
-        <input class="absolute w-[1038px] h-[131px] top-[702px] px-5 text-[50px] border-[#AE1F1F] border-[5px] rounded-[50px] focus:outline-none">
-    
-    
-        <button aria-label="login" class="absolute bg-[#AE1F1F] w-[234px] h-[67px] top-[1068px] pb-[5px] rounded-[50px] text-[32px] font-semibold hover:cursor-pointer">
-            로그인
-        </button>
-
-        <!-- aria-label은 어떻게 처리할 것인지 -->
-        <a href="find" aria-label="find" class="absolute top-[1016px] left-[1147px] text-[20px] text-[#807E7E] font-semibold">아이디/비밀번호 찾기</a>
-        <a href="signup" aria-label="signup" class="absolute top-[1016px] left-[1363px] text-[20px] text-[#807E7E] font-semibold">회원가입 하기</a>
+    <div class="flex relative h-[calc(100vh-70px)] bg-black text-white justify-center">
+        <!--bg-left-top vs bg-center -->
+        <div class="absolute w-full h-full opacity-50 bg-no-repeat bg-cover bg-left-top"  
+        style="background-image: url('');">
+        </div>
+        <div class="flex flex-col justify-between items-center absolute top-[199px] w-[616px] h-[546px] bg-[#252525] rounded-[30px] py-9">
+            
+            <!-- 상단 섹션 -->
+            <div class="flex flex-col items-center w-full">
+                <h1 class="text-center text-[32px] font-normal mb-15">Login</h1>
+                
+                <div class="flex flex-col px-20.5 items-start w-full mb-9 gap-y-3">
+                    <label for="email" class="text-[21px] font-normal">이메일 주소</label>
+                    <input id="email" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                </div>
+           
+                <div class="flex flex-col px-20.5 items-start w-full mb-[46px] gap-y-3">
+                    <label for="password" class="text-[21px] font-normal">비밀번호</label>
+                    <input id="password" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                </div>
+           
+                <button aria-label="login" class="mb-8.5 bg-[#AE1F1F] w-[187px] h-[54px] rounded-[50px] text-[24px] font-normal hover:cursor-pointer">
+                    로그인
+                </button>
+            </div>
+            
+            <!-- 하단 링크 섹션 -->
+            <div class="w-full px-22.5 flex justify-between">
+                <a href="find" class="text-[14px] text-[#807E7E] font-normal">비밀번호 찾기</a>
+                <a href="signup" class="text-[14px] text-[#807E7E] font-normal">회원가입</a>
+            </div>
+        </div>
     </div>
 </main>
