@@ -45,27 +45,23 @@
                         <ul class="space-y-3">
                             <li><a href="/aboutus/activity" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">활동</a></li>
                             <li><a href="/aboutus/SNS"      class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">SNS</a></li>
-                            <li><a href="/aboutus/calendar" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">일정</a></li>
                         </ul>
                     </div>
                     <!-- Notice -->
                     <div class="w-[166px] px-4">
                         <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Notice</h3>
                         <ul class="space-y-3">
-                            <li><a href="announcements" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">공지사항</a></li>
-                            <li><a href="news"          class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">뉴스</a></li>
-                            <li><a href="press"         class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">보도자료</a></li>
-                            <li><a href="events"        class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">이벤트</a></li>
+                            <li><a href="/notice/announcement" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">공지사항</a></li>
+                            <li><a href="/notice/rule"         class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">규칙</a></li>
+                            <li><a href="/notice/calendar"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">캘린더</a></li>
                         </ul>
                     </div>
                     <!-- Community -->
                     <div class="w-[166px] px-4">
                         <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Community</h3>
                         <ul class="space-y-3">
-                            <li><a href="forum"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">토론 게시판</a></li>
-                            <li><a href="qna"       class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">Q&A</a></li>
-                            <li><a href="reviews"   class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">후기</a></li>
-                            <li><a href="gallery"   class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">갤러리</a></li>
+                            <li><a href="/community/feed"  class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">피드</a></li>
+                            <li><a href="/community/media" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">미디어관</a></li>
                         </ul>
                     </div>
                     <!-- Study -->
