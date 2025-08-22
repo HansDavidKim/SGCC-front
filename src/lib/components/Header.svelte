@@ -19,8 +19,8 @@
                 <img src={SogangLogo} alt="Logo">
             </a>
             <a href="/" aria-label="Main Menu" class="flex flex-col justify-center ml-[8px] h-full">
-                <span class="text-[40px] text-white font-bold leading-none">SGCC</span>
-                <span class="text-[8px] text-white font-light">Sogang computer club</span>
+                <span class="text-[40px] text-white font-bold leading-none font-[Sogang]">SGCC</span>
+                <span class="text-[8px] text-white font-light font-[Sogang]">Sogang computer club</span>
             </a>
         </div>
 
