@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { PostCard } from '$lib';
+    import { FeedCard } from '$lib';
     import type { PageData } from './$types';
     import { makeNavArray } from '$lib';
 
@@ -22,7 +22,7 @@
         <div class="flex justify-center">
             <div class="flex flex-col w-250 gap-9">
                 {#each slicedPostSummary as data}
-                    <PostCard {data} />
+                    <FeedCard {data} />
                 {/each}
             </div>
         </div>

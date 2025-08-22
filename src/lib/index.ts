@@ -3,7 +3,7 @@ export { default as Footer } from './components/Footer.svelte';
 export { default as Header } from './components/Header.svelte';
 export { default as ImageSlider } from './components/ImageSlider.svelte';
 export { default as Menu } from './components/Menu.svelte';
-export { default as PostCard } from './components/PostCard.svelte';
+export { default as FeedCard } from './components/FeedCard.svelte';
 export { default as MediaCard } from './components/MediaCard.svelte';
 
 export { makeNavArray } from './utils/make-nav-array.ts';
