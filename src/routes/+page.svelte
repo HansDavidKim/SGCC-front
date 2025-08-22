@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ImageSlider from '$lib/components/ImageSlider.svelte'
+  import { ImageSlider } from '$lib';
 </script>
 
 <main class="h-[calc(100vh-70px)] overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">

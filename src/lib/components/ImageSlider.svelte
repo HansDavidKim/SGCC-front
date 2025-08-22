@@ -8,7 +8,7 @@
 
 
     let imageIndex: number = 0;
-    let interval: number = 10000;
+    let interval: number = 1000;
     let timer = setTimeout(nextImage, interval);
 
     function nextImage(): void {
