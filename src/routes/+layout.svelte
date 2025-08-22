@@ -6,7 +6,7 @@
     import { Footer } from '$lib';
   </script>
   
-  <div class="font-['Pretendard']">
+  <div class="font-[Pretendard]">
     <Header/>
       {@render children()}
     <Footer/>

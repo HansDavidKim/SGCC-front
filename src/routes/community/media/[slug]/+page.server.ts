@@ -8,18 +8,14 @@ import { marked } from 'marked';
 import createDOMPurify from 'dompurify';
 
 export const load: PageServerLoad = async ({ url, params }) => {
-    const urlSlug = params.slug;
-    const id = parseInt(urlSlug.split('-').pop());
+    const slug = params.slug;
+    const id = parseInt(slug.split('-').pop());
     if (isNaN(id)) {
         throw error(404, 'Can\'t find media.');
     }
     const media: MediaSummary = allMedia.find(item => item.id === id);
     if (!media) {
         throw error(404, 'Can\'t find media.');
-    }
-    const slug = slugify(media.title, media.id);
-    if (slug !== urlSlug) {
-        throw redirect(301, `/community/media/${slug}`);
     }
 
     const rawHTML = await marked.parse(media.content);
