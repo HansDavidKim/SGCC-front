@@ -8,7 +8,7 @@
 
 
     let imageIndex: number = 0;
-    let interval: number = 10000;
+    let interval: number = 1000;
     let timer = setTimeout(nextImage, interval);
 
     function nextImage(): void {
@@ -50,22 +50,22 @@
 
     <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-[19px] [&>*]:hover:cursor-pointer [&>*]:rounded-full">
       <button
-        class="w-[16px] h-[16px] border-[4px] border-[#AE1F1F] focus:outline-none"
+        class="w-[16px] h-[16px] border-[2px] border-[#AE1F1F] focus:outline-none"
         class:bg-white={imageIndex === 0}
         on:click={() => showImage(0)} aria-label="Image1">
       </button>
       <button
-        class="w-[16px] h-[16px] border-[4px] border-[#AE1F1F] focus:outline-none"
+        class="w-[16px] h-[16px] border-[2px] border-[#AE1F1F] focus:outline-none"
         class:bg-white={imageIndex === 1}
         on:click={() => showImage(1)} aria-label="Image1">
       </button>
       <button
-        class="w-[16px] h-[16px] border-[4px] border-[#AE1F1F] focus:outline-none"
+        class="w-[16px] h-[16px] border-[2px] border-[#AE1F1F] focus:outline-none"
         class:bg-white={imageIndex === 2}
         on:click={() => showImage(2)} aria-label="Image1">
       </button>
       <button
-        class="w-[16px] h-[16px] border-[4px] border-[#AE1F1F] focus:outline-none"
+        class="w-[16px] h-[16px] border-[2px] border-[#AE1F1F] focus:outline-none"
         class:bg-white={imageIndex === 3}
         on:click={() => showImage(3)} aria-label="Image1">
       </button>
