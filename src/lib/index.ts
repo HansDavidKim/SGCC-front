@@ -5,9 +5,11 @@ export { default as ImageSlider } from './components/ImageSlider.svelte';
 export { default as Menu } from './components/Menu.svelte';
 export { default as FeedCard } from './components/FeedCard.svelte';
 export { default as MediaCard } from './components/MediaCard.svelte';
+export { default as Calendar } from './components/Calendar.svelte';
 
 export { makeNavArray } from './utils/make-nav-array.ts';
 export { slugify } from './utils/slugify.ts';
 
 export type { PostSummary } from './types';
 export type { MediaSummary } from './types';
+export type { Event } from './types';
