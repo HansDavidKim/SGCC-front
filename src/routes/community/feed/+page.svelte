@@ -1,15 +1,11 @@
 <script lang="ts">
     import { FeedCard } from '$lib';
-    import type { PageData } from './$types';
     import { makeNavArray } from '$lib';
 
     const NAV_LENGTH: number = 5;
 
-    export let data: PageData;
-    $: slicedPostSummary = data.slicedPostSummary;
-    $: currentPage = data.currentPage;
-    $: totalPages = data.totalPages;
-    $: navArray = makeNavArray(currentPage, totalPages, NAV_LENGTH);
+    let { slicedPostSummary, currentPage, totalPages } = $props();
+    let navArray = makeNavArray(currentPage, totalPages, NAV_LENGTH);
 </script>
 
 <main>

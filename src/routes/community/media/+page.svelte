@@ -1,15 +1,11 @@
 <script lang="ts">
     import { MediaCard } from '$lib';
-    import type { PageData } from './$types';
     import { makeNavArray } from '$lib';
 
     const NAV_LENGTH: number = 4;
 
-    export let data: PageData;
-    $: slicedMediaSummary = data.slicedMediaSummary;
-    $: currentPage = data.currentPage;
-    $: totalPages = data.totalPages;
-    $: navArray = makeNavArray(currentPage, totalPages, NAV_LENGTH);
+    let { slicedMediaSummary, currentPage, totalPages } = $props();
+    let navArray = makeNavArray(currentPage, totalPages, NAV_LENGTH);
 </script>
 
 <main>
