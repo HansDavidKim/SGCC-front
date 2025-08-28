@@ -27,21 +27,13 @@
     });
 
     function prevMonth() {
-        if (month === 1) {
-            month = 12;
-            year -= 1;
-        } else {
-            month -= 1;
-        }
+        date.setMonth(date.getMonth() - 1);
+        date = new Date(date);
     }
 
     function nextMonth() {
-        if (month === 12) {
-            month = 1;
-            year += 1;
-        } else {
-            month += 1;
-        }
+        date.setMonth(date.getMonth() + 1);
+        date = new Date(date);
     }
 </script>
 
