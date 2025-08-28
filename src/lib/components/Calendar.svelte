@@ -1,10 +1,18 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import type { Event } from '$lib';
+    import { calculateCalendarDays } from '$lib';
+    import type { Event, CalendarDay } from '$lib';
+    import { text } from '@sveltejs/kit';
 
     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
     const CALENDAR_ID = import.meta.env.VITE_CALENDAR_ID;
     const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&singleEvents=true&orderBy=startTime`;
+
+    let date = $state(new Date());
+    let year = $derived(date.getFullYear());
+    let month = $derived(date.getMonth() + 1);
+    let lastDayOfMonth = $derived(new Date(year, month, 0).getDate());
+    let calendarDays = $derived(calculateCalendarDays(year, month, lastDayOfMonth));
 
     let events: Event[];
 
@@ -13,13 +21,50 @@
             const response = await fetch(url);
             const data = await response.json();
             events = data.items;
-            console.log(events[0]);
         } catch (error) {
             console.error('Error fetching calendar data:', error);
         }
     });
+
+    function prevMonth() {
+        if (month === 1) {
+            month = 12;
+            year -= 1;
+        } else {
+            month -= 1;
+        }
+    }
+
+    function nextMonth() {
+        if (month === 12) {
+            month = 1;
+            year += 1;
+        } else {
+            month += 1;
+        }
+    }
 </script>
 
-{#if events && events.length > 0}
-    <p>{events[0].end.date}</p>
-{/if}
+<div class="max-w-5xl mx-auto">
+    <h2 class="mx-auto text-center text-4xl my-12 font-bold">
+        <button onclick={prevMonth} class="cursor-pointer">&lt;</button>
+        {month}월
+        <button onclick={nextMonth} class="cursor-pointer">/&gt;</button>
+    </h2>
+    <div class="grid grid-cols-7 text-center">
+        <div class="p-3">월</div>
+        <div class="p-3">화</div>
+        <div class="p-3">수</div>
+        <div class="p-3">목</div>
+        <div class="p-3">금</div>
+        <div class="p-3">토</div>
+        <div class="p-3">일</div>
+    </div>
+    <div class="grid grid-cols-7 text-center">
+        {#each calendarDays as calendarDay}
+            <div class="p-3 aspect-square" class:text-gray-400={!calendarDay.isCurrentMonth}>
+                {calendarDay.day}
+            </div>
+        {/each}
+    </div>
+</div>

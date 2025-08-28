@@ -9,7 +9,9 @@ export { default as Calendar } from './components/Calendar.svelte';
 
 export { makeNavArray } from './utils/make-nav-array.ts';
 export { slugify } from './utils/slugify.ts';
+export { calculateCalendarDays } from './utils/calculate-calendar-days.ts';
 
 export type { PostSummary } from './types';
 export type { MediaSummary } from './types';
 export type { Event } from './types';
+export type { CalendarDay } from './types';

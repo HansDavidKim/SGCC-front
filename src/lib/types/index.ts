@@ -23,3 +23,8 @@ export interface Event {
     location?: string;
     description?: string;
 }
+
+export interface CalendarDay {
+    day: number;
+    isCurrentMonth: boolean;
+}
