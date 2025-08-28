@@ -45,8 +45,8 @@
     }
 </script>
 
-<div class="max-w-5xl mx-auto">
-    <h2 class="mx-auto text-center text-4xl my-12 font-bold">
+<div class="max-w-5xl mx-auto text-white">
+    <h2 class="mx-auto text-center text-4xl py-12 font-bold">
         <button onclick={prevMonth} class="cursor-pointer">&lt;</button>
         {month}월
         <button onclick={nextMonth} class="cursor-pointer">/&gt;</button>
