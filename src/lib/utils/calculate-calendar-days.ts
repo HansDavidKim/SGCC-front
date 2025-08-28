@@ -15,18 +15,11 @@ export function calculateCalendarDays(year: number, month: number, lastDayOfMont
         days.push({ day: i, isCurrentMonth: true });
     }
 
-    if (42 - offset - lastDayOfMonth >= 7) {
-        for (let i = 1; i <= 35 - offset - lastDayOfMonth; i++) {
-            days.push({ day: i, isCurrentMonth: false });
-        }
-    } else {
-        for (let i = 1; i <= 42 - offset - lastDayOfMonth; i++) {
-            days.push({ day: i, isCurrentMonth: false });
-        }
+    let nextMonthDay = 1;
+    while (days.length % 7 !== 0) {
+        days.push({ day: nextMonthDay, isCurrentMonth: false });
+        nextMonthDay++;
     }
-
-    
-
 
     return days;
 }
