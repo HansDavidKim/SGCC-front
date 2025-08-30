@@ -23,6 +23,7 @@
                 <div class="bg-[#AE1F1F] px-4 py-3 rounded text-sm">
                     합격자 발표 (9/?)
                 </div>
+                
             </div>
 
             <!-- 지원하기 버튼 -->
@@ -41,7 +42,7 @@
            
             <div class="flex w-full mb-8 self-start justify-center">
                 <div class="flex bg-[#252525] w-[474px] h-[54px]">
-                    <span class="text-[24px] pt-2 font-pretendard-variable">서류 모집 (~9/7)</span>
+                    <span class="text-[24px] pt-2 pl-5 font-pretendard-variable">서류 모집 (~9/7)</span>
                 </div>
                 <div class="ml-3.5 text-center pt-1 text-[24px] bg-[#AE1F1F] border-[5px] border-[#AE1F1F] rounded-[8px] w-[225px] h-[54px]">합격자 발표 (9/?)</div>
             </div>

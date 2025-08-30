@@ -8,14 +8,13 @@
               <a href="/library"   class="relative flex flex-1 min-w-[60px] items-center justify-center text-white transition-colors duration-300 after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-0 after:-translate-x-1/2 after:bg-[#7A2AD6] after:transition-all after:duration-200 after:content-[''] hover:text-gray-200 hover:after:w-full">Library</a>
             </div>
 
-            <div class="absolute left-1/2 top-full z-10 h-[250px] w-screen -translate-x-1/2 translate-y-[-10px] transform invisible opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-90"
-            style="background: linear-gradient(to right, #ff0000 0%, #ff8000 14.28%, #ffff00 28.57%, #00ff00 42.86%, #0000ff 57.14%, #4b0082 71.43%, #9400d3 100%);">
+            <div class="absolute left-1/2 top-full z-10 h-[250px] w-screen -translate-x-1/2 translate-y-[-10px] transform invisible opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 bg-[#AE1F1F]">
                 <div class="absolute left-1/2 flex w-[50%] max-w-[786px] -translate-x-1/2 text-left text-[18px] text-white [&>div]:pl-5">
                     <div class="flex-1 min-w-[60px] h-[250px] border-l-1 border-l-white border-r-1 border-r-white">
                         <ul class="[&>li]:mt-4.25">
-                            <li><a href="/aboutus/activity" class="block transition-colors hover:text-red-600">인사말</a></li>
-                            <li><a href="/aboutus/SNS"      class="block transition-colors hover:text-red-600">활동/행사</a></li>
-                            <li><a href="/aboutus/calendar" class="block transition-colors hover:text-red-600">SNS</a></li>
+                            <li><a href="/aboutus/" class="block transition-colors hover:text-red-600">인사말</a></li>
+                            <li><a href="/aboutus/activity"      class="block transition-colors hover:text-red-600">활동/행사</a></li>
+                            <li><a href="/aboutus/SNS" class="block transition-colors hover:text-red-600">SNS</a></li>
                         </ul>
                     </div>
 

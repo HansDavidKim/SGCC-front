@@ -29,7 +29,7 @@
 </script>
 
 <header>
-    <nav class="relative z-20 flex h-[70px] items-center bg-black px-11.25">
+    <nav class="relative z-20 flex h-[70px] items-center bg-black px-7 desktop:px-11.25">
         <div class="flex items-center">
             <a href="/" target="_self" class="hidden desktop:block w-[36px] flex-shrink-0">
                 <img src={SogangLogo} alt="Logo">
@@ -45,14 +45,20 @@
         <!-- Mobile Menu Icon -->
         {#if $isMobileMenuOpen}
             <div class="ml-auto desktop:hidden">
-                <button on:click={toggleMobileMenu} class="rounded-md p-1 text-white focus:outline-none rotate-180">
-                    <img src={mobileMenuIcon} alt="Menu" class="h-12">
+                <button on:click={toggleMobileMenu} aria-label="Close Menu" class="rounded-md p-1 text-white focus:outline-none rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
                 </button>
             </div>
         {:else}
             <div class="ml-auto desktop:hidden">
-                <button on:click={toggleMobileMenu} class="rounded-md p-1 text-white focus:outline-none">
-                    <img src={mobileMenuIcon} alt="Menu" class="h-12">
+                <button on:click={toggleMobileMenu} aria-label="Open Menu" class="rounded-md p-1 text-white focus:outline-none">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
                 </button>
             </div>
         {/if}
