@@ -16,15 +16,22 @@ export interface MediaSummary {
     thumbnailUrl: string;
 }
 
+export interface CalendarDay {
+    day: number;
+    isCurrentMonth: boolean;
+}
+
 export interface Event {
     summary: string;
-    start: { dateTime?: string; date?: string };
-    end: { dateTime?: string; date?: string };
+    start: Date;
+    end: Date;
     location?: string;
     description?: string;
 }
 
-export interface CalendarDay {
-    day: number;
-    isCurrentMonth: boolean;
+export interface ProcessedEvent extends Event {
+    row: number;
+    col: number;
+    span: number;
+    lane: number;
 }

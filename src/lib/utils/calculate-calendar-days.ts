@@ -1,10 +1,11 @@
 import type { CalendarDay } from '$lib';
 
-export function calculateCalendarDays(year: number, month: number, lastDayOfMonth: number): CalendarDay[] {
+export function calculateCalendarDays(year: number, month: number): CalendarDay[] {
     const days: CalendarDay[] = [];
 
     const startDayOfMonth = new Date(year, month - 1, 1).getDay();
     const offset = (startDayOfMonth + 6) % 7;
+    const lastDayOfMonth = new Date(year, month, 0).getDate();
     const lastDayOfPrevMonth = new Date(year, month - 1, 0).getDate();
 
     for (let i = 0; i < offset; i++) {

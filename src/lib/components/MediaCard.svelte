@@ -7,7 +7,7 @@
 
 <a href="./media/{slugify(data.title, data.id)}" class="w-80 rounded-xl overflow-hidden bg-black">
     <div class="w-80 h-80">
-        <img src={data.thumbnailUrl} alt="Media picture" class="w-full h-full object-cover">
+        <img src={data.thumbnailUrl} alt="Media" class="w-full h-full object-cover">
     </div>
     <div class="">
         <h2 class="font-['Pretendard'] text-2xl text-center text-white font-bold line-clamp-2 m-3">{data.title}</h2>
