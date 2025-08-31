@@ -17,7 +17,7 @@ export interface MediaSummary {
 }
 
 export interface CalendarDay {
-    day: number;
+    date: Date;
     isCurrentMonth: boolean;
 }
 

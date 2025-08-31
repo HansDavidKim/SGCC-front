@@ -1,11 +1,11 @@
-import { differenceInDays, startOfWeek, endOfWeek, max, min, addDays } from 'date-fns';
-import { Event, ProcessedEvent, CalendarDay } from '$lib';
+import { differenceInDays, startOfWeek, startOfDay, endOfWeek, max, min, addDays } from 'date-fns';
+import type { Event, ProcessedEvent, CalendarDay } from '$lib';
 
 export function calculateProcessedEvents(year: number, month: number, calendarDays: CalendarDay[], events: Event[]): ProcessedEvent[] {
     const processedEvents: ProcessedEvent[] = [];
     const weekLanes: boolean[][][] = Array(6).fill(0).map(() => []);
-    const gridStartDate = new Date(year, calendarDays[0].isCurrentMonth ? month - 1 : month - 2, calendarDays[0].day);
-    const gridEndDate = new Date(year, calendarDays[calendarDays.length - 1].isCurrentMonth ? month - 1 : month, calendarDays[calendarDays.length - 1].day);
+    const gridStartDate = calendarDays[0].date;
+    const gridEndDate = calendarDays[calendarDays.length - 1].date;
 
     for (const event of events) {
         const startDate = event.start;
@@ -19,15 +19,15 @@ export function calculateProcessedEvents(year: number, month: number, calendarDa
 
         while (pointer <= endDate) {
             const weekStart = startOfWeek(pointer, { weekStartsOn: 1 });
-            const weekEnd = endOfWeek(pointer, { weekStartsOn: 1 });
+            const weekEnd = addDays(startOfDay(endOfWeek(pointer, { weekStartsOn: 1 })), 1);
 
             const partStartDate = max([startDate, weekStart]);
             const partEndDate = min([endDate, weekEnd]);
 
             const startOffset = differenceInDays(partStartDate, gridStartDate);
-            const duration = differenceInDays(partEndDate, partStartDate) + 1;
+            const duration = differenceInDays(partEndDate, partStartDate);
 
-            if (startOffset < 0) {
+            if (startOffset < 0 || startOffset >= calendarDays.length) {
                 pointer = addDays(weekStart, 7);
                 continue;
             }

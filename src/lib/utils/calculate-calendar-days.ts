@@ -1,25 +1,29 @@
 import type { CalendarDay } from '$lib';
 
 export function calculateCalendarDays(year: number, month: number): CalendarDay[] {
+    const monthIndex = month - 1;
     const days: CalendarDay[] = [];
 
-    const startDayOfMonth = new Date(year, month - 1, 1).getDay();
-    const offset = (startDayOfMonth + 6) % 7;
-    const lastDayOfMonth = new Date(year, month, 0).getDate();
-    const lastDayOfPrevMonth = new Date(year, month - 1, 0).getDate();
+    const firstDateOfMonth = new Date(year, monthIndex, 1);
+    const lastDateOfMonth = new Date(year, monthIndex + 1, 0);
 
-    for (let i = 0; i < offset; i++) {
-        days.push({ day: lastDayOfPrevMonth - offset + i + 1, isCurrentMonth: false });
-    }
+    const startDayOfWeek = firstDateOfMonth.getDay();
+    const offset = startDayOfWeek === 0 ? 6 : startDayOfWeek - 1;
+    const gridStartDate = new Date(year, monthIndex, 1 - offset);
 
-    for (let i = 1; i <= lastDayOfMonth; i++) {
-        days.push({ day: i, isCurrentMonth: true });
-    }
+    let currentDate = new Date(gridStartDate);
 
-    let nextMonthDay = 1;
-    while (days.length % 7 !== 0) {
-        days.push({ day: nextMonthDay, isCurrentMonth: false });
-        nextMonthDay++;
+    while (true) {
+        days.push({
+            date: new Date(currentDate),
+            isCurrentMonth: currentDate.getMonth() === monthIndex
+        });
+        
+        currentDate.setDate(currentDate.getDate() + 1);
+
+        if (currentDate.getDay() === 1 && currentDate > lastDateOfMonth) {
+            break;
+        }
     }
 
     return days;
