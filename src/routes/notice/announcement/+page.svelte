@@ -1,10 +1,10 @@
-<script lang="ts">
-
+<script lang="ts"> 
+    import { Title } from '$lib';
 </script>
 
 <main>
     <div class="flex relative justify-center bg-black h-[2480px] text-white">
-        <h2 class="absolute top-[95px] text-[50px] font-normal">NOTICE: SGCC</h2>
+        <Title title="ANNOUNCE" />
         <h3 class="absolute top-[260px] text-[24px]">동아리방 위치 <p>엠마오관 B128호</p></h3>
 
         <div class="absolute top-[335px] w-[1400px] h-[455px] bg-[#D9D9D9]">

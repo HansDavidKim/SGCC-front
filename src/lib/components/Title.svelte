@@ -4,7 +4,7 @@
 
 <h1 class="font-[Sogang] text-center text-white py-9">
     <span class="text-5xl">
-        {title}:
+        {title}:&nbsp;
     </span>
     <span class="text-6xl">
         SGCC

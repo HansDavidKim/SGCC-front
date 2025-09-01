@@ -1,7 +1,7 @@
 <script lang="ts">
     import { MediaCard } from '$lib';
     import type { PageData } from './$types';
-    import { makeNavArray } from '$lib';
+    import { makeNavArray, Title } from '$lib';
 
     const NAV_LENGTH: number = 4;
 
@@ -12,12 +12,8 @@
 
 <main>
     <div class="bg-zinc-900 py-6">
-        <h1 class="text-[50px] text-center text-white py-12">
-        <span class="font-['Sogang'] font-light">미디어관:</span>
-        <span class="font-normal"> </span>
-        <span class="font-['Sogang'] font-extrabold text-[64px]">SGCC</span>
-        </h1>
-
+        <Title title="MEDIA" />
+        
         <div class="flex justify-center mt-9">
             <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {#each slicedMediaSummary as data}

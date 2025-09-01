@@ -1,7 +1,7 @@
 <script lang="ts">
     import { FeedCard } from '$lib';
     import type { PageData } from './$types';
-    import { makeNavArray } from '$lib';
+    import { makeNavArray, Title } from '$lib';
 
     const NAV_LENGTH: number = 5;
 
@@ -12,11 +12,7 @@
 
 <main>
     <div class="bg-zinc-900">
-        <h1 class="text-[50px] text-center text-white py-12">
-            <span class="font-['Sogang'] font-light">feed:</span>
-            <span class="font-normal"> </span>
-            <span class="font-['Sogang'] font-extrabold text-[64px]">SGCC</span>
-        </h1>
+        <Title title="FEED" />
         <div class="flex justify-center">
             <div class="flex flex-col w-250 gap-9">
                 {#each slicedPostSummary as data}
