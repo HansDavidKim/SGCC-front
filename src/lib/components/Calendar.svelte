@@ -57,7 +57,7 @@
 
     function handleYearChange(event: Event) {
         const selectedYear = parseInt((event.target as HTMLSelectElement).value);
-        date = new Date(selectedYear, 0, 1);
+        date = new Date(selectedYear, month - 1, 1);
     }
 </script>
 
@@ -69,9 +69,9 @@
             {/each}
         </select>
         <h2 class="justify-center mx-auto text-center text-4xl py-12 font-bold">
-            <button onclick={prevMonth} class:cursor-pointer={month!==1} class:text-gray-600={month===1} disabled={month===1}>&lt;</button>
+            <button onclick={prevMonth} class="cursor-pointer">&lt;</button>
             {month}월
-            <button onclick={nextMonth} class:cursor-pointer={month!==12} class:text-gray-600={month===12} disabled={month===12}>/&gt;</button>
+            <button onclick={nextMonth} class="cursor-pointer">/&gt;</button>
         </h2>
     </div>
     <div class="grid grid-cols-7 text-center">
