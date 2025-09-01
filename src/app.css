@@ -3,6 +3,8 @@
 
 
 
+
+
 /*
 Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
 https://github.com/orioncactus/pretendard
@@ -21,6 +23,40 @@ http://scripts.sil.org/OFL
 }
 
 @font-face {
-	font-family: 'Sogang';
+	font-family: 'SogangUniversity';
 	src: url('/fonts/SOGANG_UNIVERSITY_for_windows.ttf') format('truetype');
+}
+
+@theme {
+  /* Font Family 확장 */
+  --font-sogang: "SogangUniversity", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-pretendard-variable: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --breakpoint-desktop: 896px;
+  --breakpoint-tablet: 640px;
+}
+
+@layer base {
+  
+  h1, h2, h3, span {
+    font-family: var(--font-sogang);
+  }
+
+  p {
+    font-family: var(--font-pretendard-variable);
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera*/
+  }
+}
+
+body {
+  min-width: 320px;
+  overflow-x: auto;
 }
