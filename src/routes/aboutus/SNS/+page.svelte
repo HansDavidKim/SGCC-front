@@ -87,7 +87,5 @@
       공식 GITHUB ORGANIZATION을 통해 동아리 내에서 진행한 프로젝트 내용을 확인해볼 수 있습니다.
       지금까지 진행된 슬기로운 인디 생활 등 지금까지 진행된 다양한 프로젝트들의 소스 코드를 통해 앞으로의 개발에 있어서의 지침서로 사용할 수 있습니다.<br>
     </p>
-    <div class="w-full max-w-[646px] aspect-[359/245] bg-[#AE1F1F] rounded-[50px]">
-    </div>
   </div>
 </main>
