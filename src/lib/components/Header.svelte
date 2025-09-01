@@ -1,6 +1,6 @@
 <script lang="ts">
     import MobileMenu from '$lib/components/Menu.svelte'
-    import SogangLogo from '$lib/assets/images/sogang-logo.png'
+    import SogangLogo from '$lib/assets/images/SGCC-character.svg'
 
     const mobileMenuIcon = "https://png.pngtree.com/element_our/20190602/ourmid/pngtree-white-laptop-illustration-image_1412935.jpg"
     let isMobileMenuOpen: boolean = false;
