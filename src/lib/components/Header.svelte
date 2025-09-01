@@ -27,11 +27,11 @@
         <!-- 중앙 메뉴 (화면 절대 중앙) -->
         <div class="group h-full absolute left-1/2 -translate-x-1/2">
             <div class="hidden xl:flex h-full font-normal text-[16px]" role="navigation">
-                <a href="/aboutus"   class="relative flex items-center justify-center w-[170px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">About Us</a>
-                <a href="/notice"    class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Notice</a>
-                <a href="/community" class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Community</a>
-                <a href="/study"     class="relative flex items-center justify-center w-[158px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Study</a>
-                <a href="/library"   class="relative flex items-center justify-center w-[126px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Library</a>
+                <a href="/aboutus/activity"   class="relative flex items-center justify-center w-[170px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">About Us</a>
+                <a href="/notice/announcement"    class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Notice</a>
+                <a href="/community/feed" class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Community</a>
+                <a href=""     class="relative flex items-center justify-center w-[158px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Study</a>
+                <a href=""   class="relative flex items-center justify-center w-[126px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Library</a>
             </div>
             
             <!-- 드롭다운 메뉴 -->
@@ -68,20 +68,12 @@
                     <div class="w-[158px] px-4">
                         <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Study</h3>
                         <ul class="space-y-3">
-                            <li><a href="courses"       class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">강좌</a></li>
-                            <li><a href="tutorials"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">튜토리얼</a></li>
-                            <li><a href="resources"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">학습 자료</a></li>
-                            <li><a href="certification" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">인증</a></li>
                         </ul>
                     </div>
                     <!-- Library -->
                     <div class="w-[126px] px-4">
                         <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Library</h3>
                         <ul class="space-y-3">
-                            <li><a href="documents" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">문서</a></li>
-                            <li><a href="downloads" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">다운로드</a></li>
-                            <li><a href="api-docs"  class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">API 문서</a></li>
-                            <li><a href="guides"    class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">가이드</a></li>
                         </ul>
                     </div>
                 </div>
