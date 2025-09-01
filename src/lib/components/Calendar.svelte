@@ -5,7 +5,8 @@
         calculateCalendarDays, 
         calculateProcessedEvents, 
         type Event, 
-        type ProcessedEvent
+        type ProcessedEvent,
+        type CalendarDay
     } from '$lib';
 
     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
@@ -15,8 +16,9 @@
     let currentDate = new Date(new Date().setHours(0, 0, 0, 0));
     let date = $state(new Date());
     let year = $derived(date.getFullYear());
+    let dropdownYears =$derived([year - 2, year - 1, year, year + 1, year + 2]);
     let month = $derived(date.getMonth() + 1);
-    let calendarDays = $derived(calculateCalendarDays(year, month));
+    let calendarDays: CalendarDay[] = $derived(calculateCalendarDays(year, month));
     let events = $state<Event[]>([]);
     let processedEvents: ProcessedEvent[] = $derived(calculateProcessedEvents(year, month, calendarDays, events));
 
@@ -46,22 +48,32 @@
     });
 
     function prevMonth() {
-        console.log('Previous month clicked');
         date = new Date(date.getFullYear(), date.getMonth() - 1, 1);
     }
 
     function nextMonth() {
-        console.log('Next month clicked');
         date = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+    }
+
+    function handleYearChange(event: Event) {
+        const selectedYear = parseInt((event.target as HTMLSelectElement).value);
+        date = new Date(selectedYear, 0, 1);
     }
 </script>
 
 <div class="max-w-5xl mx-auto text-white">
-    <h2 class="mx-auto text-center text-4xl py-12 font-bold">
-        <button onclick={prevMonth} class="cursor-pointer">&lt;</button>
-        {month}월
-        <button onclick={nextMonth} class="cursor-pointer">/&gt;</button>
-    </h2>
+    <div class="grid grid-cols-3 items-end">
+        <select value={year} onchange={handleYearChange} class="justify-self-start bg-black text-white border border-white rounded px-2 py-2 m-6 focus:outline-none">
+            {#each dropdownYears as y}
+                <option value={y}>{y}년</option>
+            {/each}
+        </select>
+        <h2 class="justify-center mx-auto text-center text-4xl py-12 font-bold">
+            <button onclick={prevMonth} class:cursor-pointer={month!==1} class:text-gray-600={month===1} disabled={month===1}>&lt;</button>
+            {month}월
+            <button onclick={nextMonth} class:cursor-pointer={month!==12} class:text-gray-600={month===12} disabled={month===12}>/&gt;</button>
+        </h2>
+    </div>
     <div class="grid grid-cols-7 text-center">
         <div class="p-3">월</div>
         <div class="p-3">화</div>
