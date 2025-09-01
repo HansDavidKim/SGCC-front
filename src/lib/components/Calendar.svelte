@@ -91,7 +91,7 @@
         {/each}
         {#each processedEvents as event}
 			<div
-				class="absolute text-white text-xs font-semibold bg-red-800 rounded p-1 mx-1 overflow-hidden whitespace-nowrap text-ellipsis"
+				class="absolute text-white text-xs text-left font-semibold bg-red-800 rounded p-1 mx-1 overflow-hidden whitespace-nowrap text-ellipsis"
 				style="
                     grid-row: {event.row};
                     left: calc((100% / 7) * ({event.col - 1}));
