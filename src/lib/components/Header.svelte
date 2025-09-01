@@ -1,112 +1,85 @@
 <script lang="ts">
-    import MobileMenu from '$lib/components/Menu.svelte'
-    import SogangLogo from '$lib/assets/images/SGCC-character.svg'
+    import NavigationBar from '$lib/components/NavigationBar.svelte';
+    import MobileMenu from '$lib/components/MobileMenu.svelte'
+    import SogangLogo from '$lib/assets/images/sogang-logo.png'
 
-    const mobileMenuIcon = "https://png.pngtree.com/element_our/20190602/ourmid/pngtree-white-laptop-illustration-image_1412935.jpg"
-    let isMobileMenuOpen: boolean = false;
+    import { isMobileMenuOpen, toggleMobileMenu } from '$lib/Header.js';
 
-    const toggleMobileMenu = () => {
-        isMobileMenuOpen = !isMobileMenuOpen;
+    let innerWidth: number = 0;
+
+    const updateWidth = () => {
+        innerWidth = window.innerWidth;
     }
+
+    $: if(innerWidth >= 896){
+        isMobileMenuOpen.set(false);
+    }
+    
+    import { onMount } from 'svelte';
+    onMount(() => {
+        updateWidth();
+        window.addEventListener('resize', updateWidth);
+        return () => {
+            window.removeEventListener('resize', updateWidth);
+        };
+    });
+    
+    const mobileMenuIcon = "https://png.pngtree.com/element_our/20190602/ourmid/pngtree-white-laptop-illustration-image_1412935.jpg"
+
 </script>
 
 <header>
-    <nav class="flex relative items-center h-[70px] bg-black px-[45px] z-20">
-        
-        <!-- 로고 + SGCC 묶음 (왼쪽 고정) -->
-        <div class="flex items-center absolute left-[45px]">
-            <a href="/" target="_self" class="flex-shrink-0 w-[36px]">
+    <nav class="relative z-20 flex h-[70px] items-center bg-black px-7 desktop:px-11.25">
+        <div class="flex items-center">
+            <a href="/" target="_self" class="hidden desktop:block w-[36px] flex-shrink-0">
                 <img src={SogangLogo} alt="Logo">
             </a>
-            <a href="/" aria-label="Main Menu" class="flex flex-col justify-center ml-[8px] h-full">
-                <span class="text-[40px] text-white font-bold leading-none font-[Sogang]">SGCC</span>
-                <span class="text-[8px] text-white font-light font-[Sogang]">Sogang computer club</span>
+            <a href="/" aria-label="Main Menu" class="flex h-full flex-col justify-center ml-2">
+                <span class="text-[40px] font-bold leading-none text-white">SGCC</span>
+                <span class="text-[8px] font-light text-white">Sogang computer club</span>
             </a>
         </div>
-
-        <!-- 중앙 메뉴 (화면 절대 중앙) -->
-        <div class="group h-full absolute left-1/2 -translate-x-1/2">
-            <div class="hidden xl:flex h-full font-normal text-[16px]" role="navigation">
-                <a href="/aboutus/activity"   class="relative flex items-center justify-center w-[170px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">About Us</a>
-                <a href="/notice/announcement"    class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Notice</a>
-                <a href="/community/feed" class="relative flex items-center justify-center w-[166px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Community</a>
-                <a href=""     class="relative flex items-center justify-center w-[158px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Study</a>
-                <a href=""   class="relative flex items-center justify-center w-[126px] text-white hover:text-gray-200 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full">Library</a>
+        
+        <NavigationBar />
+        
+        <!-- Mobile Menu Icon -->
+        {#if $isMobileMenuOpen}
+            <div class="ml-auto desktop:hidden">
+                <button on:click={toggleMobileMenu} aria-label="Close Menu" class="rounded-md p-1 text-white focus:outline-none rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
-            
-            <!-- 드롭다운 메뉴 -->
-            <div class="absolute top-full left-1/2 bg-black shadow-lg py-8 z-10 
-            opacity-0 invisible transform -translate-x-1/2 w-screen translate-y-[-10px] transition-all duration-300
-            group-hover:opacity-90 group-hover:visible group-hover:translate-y-0">
-                <div class="flex justify-center text-center mx-5">
-                    <!-- About Us -->
-                    <div class="w-[170px] px-4">
-                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">About Us</h3>
-                        <ul class="space-y-3">
-                            <li><a href="/aboutus/activity" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">활동</a></li>
-                            <li><a href="/aboutus/SNS"      class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">SNS</a></li>
-                        </ul>
-                    </div>
-                    <!-- Notice -->
-                    <div class="w-[166px] px-4">
-                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Notice</h3>
-                        <ul class="space-y-3">
-                            <li><a href="/notice/announcement" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">공지사항</a></li>
-                            <li><a href="/notice/rule"         class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">규칙</a></li>
-                            <li><a href="/notice/calendar"     class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">캘린더</a></li>
-                        </ul>
-                    </div>
-                    <!-- Community -->
-                    <div class="w-[166px] px-4">
-                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Community</h3>
-                        <ul class="space-y-3">
-                            <li><a href="/community/feed"  class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">피드</a></li>
-                            <li><a href="/community/media" class="block text-[20px] text-gray-700 hover:text-red-600 transition-colors">미디어관</a></li>
-                        </ul>
-                    </div>
-                    <!-- Study -->
-                    <div class="w-[158px] px-4">
-                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Study</h3>
-                        <ul class="space-y-3">
-                        </ul>
-                    </div>
-                    <!-- Library -->
-                    <div class="w-[126px] px-4">
-                        <h3 class="text-sm font-semibold text-red-600 tracking-wide uppercase mb-4">Library</h3>
-                        <ul class="space-y-3">
-                        </ul>
-                    </div>
-                </div>
+        {:else}
+            <div class="ml-auto desktop:hidden">
+                <button on:click={toggleMobileMenu} aria-label="Open Menu" class="rounded-md p-1 text-white focus:outline-none">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
+                </button>
             </div>
-        </div>
-
-        <a href="login" class="hidden absolute right-[45px] xl:flex pt-1 mx-[45px] w-[110px] h-[41px] text-white font-light text-[16px] focus:outline-none border-[1px] border-[#AE1F1F] rounded-full hover:text-gray-600 items-center justify-center">LOG-IN</a>
-
-        <div class="xl:hidden ml-auto">
-            <button on:click={toggleMobileMenu} class="p-1 text-white focus:outline-none rounded-md">
-                <img src={mobileMenuIcon} alt="Menu" class="h-12">
-            </button>
-        </div>
+        {/if}
     </nav>
 
-<!--
-    <hr class="border-t-[1px] border-[#D9D9D9]">
--->
+    <!-- Cover display when open mobile menu -->
+    {#if $isMobileMenuOpen}
     <button
-        class="fixed inset-0 z-40 bg-black/50 transition-opacity duration-300"
-        class:opacity-100={isMobileMenuOpen}
-        class:opacity-0={!isMobileMenuOpen}
-        class:pointer-events-auto={isMobileMenuOpen}
-        class:pointer-events-none={!isMobileMenuOpen}
+        class="fixed inset-0 z-40 mt-[70px] bg-black/50"
+        class:pointer-events-auto={$isMobileMenuOpen}
+        class:pointer-events-none={!$isMobileMenuOpen}
         on:click={toggleMobileMenu}
         aria-label="Close menu">
     </button>
+    {/if}
 
+    <!-- Open Mobile Menu -->
     <aside
-        class="fixed top-0 right-0 z-50 w-64 h-full bg-black text-white text-lg text-center
-         transform transition-transform duration-300 ease-out xl:hidden"
-        class:translate-x-full={!isMobileMenuOpen}
-        class:translate-x-0={isMobileMenuOpen}>
-        <MobileMenu />
+        class="fixed right-0 top-0 z-50 mt-[70px] h-full w-screen max-w-101 transform transition-transform duration-300 ease-out xl:hidden"
+        class:translate-x-full={!$isMobileMenuOpen}
+        class:translate-x-0={$isMobileMenuOpen}>
+        <MobileMenu/>
     </aside>
 </header>
