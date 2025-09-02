@@ -14,6 +14,12 @@
     $: if(innerWidth >= 896){
         isMobileMenuOpen.set(false);
     }
+
+    $: if(isMobileMenuOpen) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
     
     import { onMount } from 'svelte';
     onMount(() => {
@@ -24,7 +30,6 @@
         };
     });
     
-    const mobileMenuIcon = "https://png.pngtree.com/element_our/20190602/ourmid/pngtree-white-laptop-illustration-image_1412935.jpg"
 
 </script>
 

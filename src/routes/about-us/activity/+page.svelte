@@ -14,21 +14,21 @@
     </p>
 
     <div class="mt-13 desktop:mt-60.5 flex flex-col gap-y-27.5 desktop:gap-y-31 items-center">
-      <div class="flex w-full justify-center desktop:gap-x-4 lg:gap-x-16">
+      <div class="flex flex-col-reverse items-center desktop:items-start desktop:flex-row w-full justify-center desktop:gap-x-4 lg:gap-x-16">
         <img src="#" alt="슬인디 이미지" class="max-w-[392px] desktop:max-w-[657px] w-[657px] min-w-0 aspect-[196/168] desktop:aspect-[657/433] bg-[#D9D9D9]"/>
         <div class="flex flex-col items-center gap-y-8 desktop:gap-y-24 flex-shrink-0 pl-3">
-          <h3 class="flex bg-[#AE1F1F] w-[143px] h-[27px] desktop:w-[361px] desktop:h-[71px] items-center justify-center text-[13px] desktop:text-[36px]">"슬기로운 인디 생활"</h3>
-          <p class="text-center text-[7px] vertical-tablet:text-[12px] desktop:text-[20px] leading-5 desktop:leading-10">
+          <h3 class="flex bg-[#AE1F1F] w-[291px] h-[51px] desktop:w-[361px] desktop:h-[71px] items-center justify-center text-[26px] desktop:text-[36px]">"슬기로운 인디 생활"</h3>
+          <p class="text-center text-[15px] desktop:text-[20px] leading-5 desktop:leading-10">
             SCCC 에서 매 학기마다 진행되는 인디 게임 개발 활동입니다.<br>
             게임 업계의 현직자 멘토의 검수 아래에서 개발이 진행 되며<br>
             주당 1회씩 피드백 시간을 가지며 협업 / 개발 경험을 제공합니다.</p>
         </div>
       </div>
       
-      <div class="flex flex-row-reverse desktop:flex-row w-full justify-center desktop:gap-x-4 lg:gap-x-16">
+      <div class="flex flex-col items-center desktop:items-start desktop:flex-row w-full justify-center desktop:gap-x-4 lg:gap-x-16">
         <div class="flex flex-col items-center gap-y-8 desktop:gap-y-24 flex-shrink-0 pl-3">
-          <h3 class="flex bg-[#AE1F1F] w-[143px] h-[27px] desktop:w-[361px] desktop:h-[71px] items-center justify-center text-[13px] desktop:text-[36px]">"스터디"</h3>
-          <p class="text-center text-[7px] vertical-tablet:text-[12px] desktop:text-[20px] leading-5 desktop:leading-10">
+          <h3 class="flex bg-[#AE1F1F] w-[291px] h-[51px] desktop:w-[361px] desktop:h-[71px] items-center justify-center text-[26px] desktop:text-[36px]">"스터디"</h3>
+          <p class="text-center text-[15px] desktop:text-[20px] leading-5 desktop:leading-10">
             SCCC 에서 매 학기마다 진행되는 인디 게임 개발 활동입니다.<br>
             게임 업계의 현직자 멘토의 검수 아래에서 개발이 진행 되며<br>
             주당 1회씩 피드백 시간을 가지며 협업 / 개발 경험을 제공합니다.</p>
