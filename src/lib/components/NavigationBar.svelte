@@ -21,10 +21,9 @@
                     <div class="flex-1 min-w-[60px] h-[250px] border-r-1 border-r-white">
                         <ul class="[&>li]:mt-4.25">
                             <li><a href="/notice/announcements" class="block transition-colors hover:text-red-600">공지</a></li>
-                            <li><a href="/notice/"          class="block transition-colors hover:text-red-600">동아리방</a></li>
+                            <li><a href="/notice/announcement"          class="block transition-colors hover:text-red-600">동아리방</a></li>
                             <li><a href="/notice/calendar"         class="block transition-colors hover:text-red-600">달력</a></li>
                             <li><a href="/notice/boshuu"        class="block transition-colors hover:text-red-600">모집 안내</a></li>
-                            <li><a href="/notice/rule"          class="block transition-colors hover:text-red-600">규정집</a></li>
                         </ul>
                     </div>
 
