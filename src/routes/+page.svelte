@@ -1,7 +1,6 @@
 <script lang="ts">
   import ImageSlider from '$lib/components/ImageSlider.svelte'
   import Footer from '$lib/components/Footer.svelte'
-
   
   const images: string[] = [
     "https://images.pexels.com/photos/259526/pexels-photo-259526.jpeg?cs=srgb&dl=pexels-pixabay-259526.jpg&fm=jpg",
