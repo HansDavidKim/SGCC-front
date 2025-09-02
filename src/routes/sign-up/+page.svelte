@@ -17,31 +17,31 @@
             <!-- 이메일 주소 -->
             <div class="flex flex-col items-start w-full mb-6 gap-y-3.5">
                 <label for="mobile-email" class="text-[18px] pl-2 font-normal font-sogang">이메일 주소</label>
-                <input id="mobile-email" class="w-full h-8 px-4 text-[16px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                <input id="mobile-email" class="w-full h-8 px-4 text-[16px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
             </div>
             
             <!-- 인증번호 -->
             <div class="flex flex-col items-start w-full mb-6 gap-y-3.5">
                 <label for="mobile-verification" class="text-[18px] pl-2 font-normal font-sogang">인증번호</label>
-                <input id="mobile-verification" class="w-full h-8 px-4 text-[16px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                <input id="mobile-verification" class="w-full h-8 px-4 text-[16px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
             </div>
             
             <!-- 닉네임 -->
             <div class="flex flex-col items-start w-full mb-6 gap-y-3.5">
                 <label for="mobile-nickname" class="text-[18px] pl-2 font-normal font-sogang">닉네임</label>
-                <input id="mobile-nickname" class="w-full h-8 px-4 text-[16px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                <input id="mobile-nickname" class="w-full h-8 px-4 text-[16px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
             </div>
             
             <!-- 비밀번호 -->
             <div class="flex flex-col items-start w-full mb-6 gap-y-3.5">
                 <label for="mobile-password" class="text-[18px] pl-2 font-normal font-sogang">비밀번호</label>
-                <input id="mobile-password" type="password" class="w-full h-8 px-4 text-[16px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                <input id="mobile-password" type="password" class="w-full h-8 px-4 text-[16px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
             </div>
             
             <!-- 비밀번호 확인 -->
             <div class="flex flex-col items-start w-full mb-8 gap-y-3.5">
                 <label for="mobile-password-confirm" class="text-[18px] pl-2 font-normal font-sogang">비밀번호 확인</label>
-                <input id="mobile-password-confirm" type="password" class="w-full h-8 px-4 text-[16px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                <input id="mobile-password-confirm" type="password" class="w-full h-8 px-4 text-[16px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
             </div>
             
             <!-- 회원가입 버튼 -->
@@ -68,27 +68,27 @@
                
                 <div class="flex flex-col px-20.5 items-start w-full mb-9.5 gap-y-3">
                     <label for="tablet-email" class="text-[24px] font-normal font-sogang">이메일 주소</label>
-                    <input id="tablet-email" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                    <input id="tablet-email" class="w-full h-[54px] px-5 text-[20px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
                 </div>
            
                 <div class="flex flex-col px-20.5 items-start w-full mb-9.5 gap-y-3">
                     <label for="tablet-verification" class="text-[24px] font-normal font-sogang">인증번호</label>
-                    <input id="tablet-verification" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                    <input id="tablet-verification" class="w-full h-[54px] px-5 text-[20px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
                 </div>
                 
                 <div class="flex flex-col px-20.5 items-start w-full mb-9.5 gap-y-3">
                     <label for="tablet-nickname" class="text-[24px] font-normal font-sogang">닉네임</label>
-                    <input id="tablet-nickname" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                    <input id="tablet-nickname" class="w-full h-[54px] px-5 text-[20px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
                 </div>
            
                 <div class="flex flex-col px-20.5 items-start w-full mb-9.5 gap-y-3">
                     <label for="tablet-password" class="text-[24px] font-normal font-sogang">비밀번호</label>
-                    <input id="tablet-password" type="password" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                    <input id="tablet-password" type="password" class="w-full h-[54px] px-5 text-[20px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
                 </div>
                 
                 <div class="flex flex-col px-20.5 items-start w-full mb-11.5 gap-y-3">
                     <label for="tablet-password-confirm" class="text-[24px] font-normal font-sogang">비밀번호 확인</label>
-                    <input id="tablet-password-confirm" type="password" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                    <input id="tablet-password-confirm" type="password" class="w-full h-[54px] px-5 text-[20px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
                 </div>
            
                 <button aria-label="sign-up" class="bg-[#AE1F1F] w-[187px] h-[54px] rounded-[50px] text-[20px] font-normal font-sogang hover:cursor-pointer">
