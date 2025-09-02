@@ -47,5 +47,5 @@
             </div>
         </div>
 
-        <a href="login" class="ml-auto mt-1 mr-11.25 hidden h-[41px] w-[110px] items-center justify-center rounded-full border-[3px] border-[#AE1F1F] text-[20px] font-sogang font-normal text-white focus:outline-none hover:text-gray-600 tablet:flex">Login</a>
+        <a href="/login" class="ml-auto mt-1 mr-11.25 hidden h-[41px] w-[110px] items-center justify-center rounded-full border-[3px] border-[#AE1F1F] text-[20px] font-sogang font-normal text-white focus:outline-none hover:text-gray-600 tablet:flex">Login</a>
 </div>
