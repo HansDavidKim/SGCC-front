@@ -59,12 +59,12 @@
                
                 <div class="flex flex-col px-20.5 items-start w-full mb-8 gap-y-3">
                     <label for="tablet-email" class="text-[21px] font-normal">이메일 주소</label>
-                    <input id="tablet-email" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                    <input id="tablet-email" class="w-full h-[54px] px-5 text-[20px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
                 </div>
            
                 <div class="flex flex-col px-20.5 items-start w-full mb-10 gap-y-3">
                     <label for="tablet-password" class="text-[21px] font-normal">비밀번호</label>
-                    <input id="tablet-password" type="password" class="w-full h-[54px] px-5 text-[20px] text-black border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
+                    <input id="tablet-password" type="password" class="w-full h-[54px] px-5 text-[20px] text-white border-[#AE1F1F] border-[2px] rounded-[50px] focus:outline-none">
                 </div>
            
                 <button aria-label="login" class="mb-8.5 bg-[#AE1F1F] w-[122px] h-[47px] rounded-[50px] text-[20px] font-normal font-sogang hover:cursor-pointer">
@@ -74,8 +74,8 @@
            
             <!-- 하단 링크 섹션 -->
             <div class="w-full px-22 flex justify-between">
-                <a href="find" class="text-[14px] text-white font-normal">비밀번호 찾기</a>
-                <a href="sign-up" class="text-[14px] text-white font-normal">회원가입</a>
+                <a href="/find" class="text-[14px] text-white font-normal">비밀번호 찾기</a>
+                <a href="/sign-up" class="text-[14px] text-white font-normal">회원가입</a>
             </div>
         </div>
     </div>
