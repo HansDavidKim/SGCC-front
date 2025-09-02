@@ -14,12 +14,6 @@
     $: if(innerWidth >= 896){
         isMobileMenuOpen.set(false);
     }
-
-    $: if(isMobileMenuOpen) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-    }
     
     import { onMount } from 'svelte';
     onMount(() => {
