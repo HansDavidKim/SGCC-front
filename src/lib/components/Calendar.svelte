@@ -70,7 +70,7 @@
         </select>
         <h2 class="justify-center mx-auto text-center text-4xl py-12 font-bold">
             <button onclick={prevMonth} class="cursor-pointer">&lt;</button>
-            {month}월
+                &nbsp;{month}월&nbsp;
             <button onclick={nextMonth} class="cursor-pointer">/&gt;</button>
         </h2>
     </div>
@@ -85,7 +85,7 @@
     </div>
     <div class="grid grid-cols-7 text-center relative">
         {#each calendarDays as calendarDay}
-            <div class="p-3 aspect-square" class:text-gray-400={!calendarDay.isCurrentMonth} class:text-red-500={calendarDay.date.getTime() === currentDate.getTime()}>
+            <div class="p-3 aspect-square text-lg" class:text-gray-400={!calendarDay.isCurrentMonth} class:text-red-500={calendarDay.date.getTime() === currentDate.getTime()}>
                 {calendarDay.date.getDate()}
             </div>
         {/each}
