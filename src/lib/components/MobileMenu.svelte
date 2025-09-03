@@ -62,7 +62,7 @@
                 <!-- Menu Elements -->
                 <button
                     on:click|preventDefault={() => toggleSubMenu(item.name)}
-                    class="flex relative w-full h-19.5 items-center text-white hover:text-gray-200 transition-colors duration-300
+                    class="flex relative w-full h-19.5 items-center text-white font-sogang hover:text-gray-200 transition-colors duration-300
                     after:content-[''] after:absolute after:right-0 after:translate-x-1/2 after:h-0 after:w-1.25 after:bg-[#AE1F1F] after:transition-all after:duration-200
                     hover:cursor-pointer {openSubMenu === item.name ? 'after:h-full' : '!after:h-full'}">
                     {item.name}
@@ -72,7 +72,7 @@
                     <!-- Notice 배치 조절.... -->
                     {#if openSubMenu == 'Notice'}
                         <div class="absolute z-10 left-full -top-21 h-[250px] w-screen transform shadow-lg transition-all duration-300 visible opacity-90">
-                            <div class="absolute flex w-[50%] max-w-[786px] text-left text-[18px] text-white [&>div]:pl-9.5">
+                            <div class="absolute flex w-[50%] max-w-[786px] text-left text-[18px] text-white font-pretendard-variable [&>div]:pl-9.5">
                                 <div class="flex-1 min-w-[60px] h-[250px]">
                                     <ul class="mt-1.5 [&>li]:h-19.5">
                                         {#each item.subItems as subItem}
@@ -87,7 +87,7 @@
                         </div>
                     {:else} <!-- 나머지 메뉴 -->
                         <div class="absolute z-10 left-full -top-1.5 h-[250px] w-screen transform shadow-lg transition-all duration-300 visible opacity-90">
-                            <div class="absolute flex w-[50%] max-w-[786px] text-left text-[18px] text-white [&>div]:pl-9.5">
+                            <div class="absolute flex w-[50%] max-w-[786px] text-left text-[18px] text-white font-pretendard-variable [&>div]:pl-9.5">
                                 <div class="flex-1 min-w-[60px] h-[250px]">
                                     <ul class="mt-1.5 [&>li]:h-19.5">
                                         {#each item.subItems as subItem}
@@ -104,5 +104,19 @@
                 {/if}
             </div>
         {/each}
+        <div class="flex flex-col text-white mt-auto -translate-y-18">
+            <a href="/login" on:click={() => {
+                toggleMobileMenu();
+                openSubMenu = null;
+            }} class="min-w-[60px] h-12 mt-auto text-[20px]">
+                Login
+            </a>
+            <a href="/sign-up" on:click={() => {
+                toggleMobileMenu();
+                openSubMenu = null;
+            }} class="min-w-[60px] h-12 mt-auto text-[20px]">
+                Sign Up
+            </a>
+        </div>
     </div>
 </div>

@@ -28,7 +28,7 @@
 </script>
 
 <header>
-    <nav class="relative z-20 flex h-[70px] items-center bg-black px-9 desktop:px-11.25">
+    <nav class="relative z-20 flex h-[70px] items-center bg-black px-7 desktop:px-11.25">
         <div class="flex items-center">
             <a href="/" target="_self" class="w-[36px] flex-shrink-0">
                 <img src={SogangLogo} alt="Logo">

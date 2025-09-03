@@ -41,7 +41,7 @@
 			<img
 				src={images[currentImageIndex]}
 				alt={`Slide ${currentImageIndex + 1}`}
-				class="absolute inset-0 w-full h-full object-cover rounded-xl"
+				class="absolute inset-0 w-full h-full object-cover"
 				in:fade={{ duration: 200 }}
 				out:fade={{ duration: 200 }}/>
 		{/key}
