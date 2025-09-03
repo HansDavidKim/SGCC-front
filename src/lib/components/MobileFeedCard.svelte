@@ -4,17 +4,17 @@
     let { data }: PostSummary = $props();
 </script>
 
-<a href={data.url} class="flex h-40 items-center w-full" aria-label="Post Card">
-    <div class="w-70 h-full m-4 flex-shrink-0 overflow-hidden">
+<a href={data.url} class="flex flex-col w-75 gap-3" aria-label="Post Card">
+    <div class="flex-shrink-0 overflow-hidden">
         <img
             src={data.thumbnailUrl}
-            class="w-full h-full rounded-lg object-cover aspect-video"
+            class="w-full rounded-lg object-cover aspect-video"
             alt=""
         />
     </div>
-    <div class="h-full flex flex-col justify-between">
+    <div class="flex flex-col gap-3 justify-between mx-3">
         <div>
-            <h2 class="text-2xl font-bold line-clamp-1 text-white font-[Pretendard_Variable]">{data.title}</h2>
+            <h2 class="text-xl font-bold line-clamp-2 text-white font-[Pretendard_Variable]">{data.title}</h2>
             <p class="text-sm text-white line-clamp-3 font-[Pretendard_Variable]">{data.excerpt}</p>
         </div>
         <div class="text-xs text-white font-[Pretendard_Variable]">

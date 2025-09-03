@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { FeedCard } from '$lib';
+    import { FeedCard, MobileFeedCard } from '$lib';
     import type { PageProps } from './$types';
     import { makeNavArray, Title } from '$lib';
 
@@ -8,16 +8,26 @@
     let { data }: PageProps = $props();
     let { slicedPostSummary, currentPage, totalPages } = $derived(data);
     let navArray = $derived(makeNavArray(currentPage, totalPages, NAV_LENGTH));
+    let width = $state(window.innerWidth);
+    let isMobile = $derived(width < 640);
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <main>
     <div class="bg-zinc-900">
         <Title title="FEED" />
         <div class="flex justify-center">
-            <div class="flex flex-col w-250 gap-9">
-                {#each slicedPostSummary as data}
-                    <FeedCard {data} />
-                {/each}
+            <div class="flex flex-col items-center w-250 gap-9">
+                {#if isMobile}
+                    {#each slicedPostSummary as data}
+                        <MobileFeedCard {data} />
+                    {/each}
+                {:else}
+                    {#each slicedPostSummary as data}
+                        <FeedCard {data} />
+                    {/each}
+                {/if}
             </div>
         </div>
 

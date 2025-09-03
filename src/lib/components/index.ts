@@ -7,3 +7,4 @@ export { default as ImageSlider } from './ImageSlider.svelte';
 export { default as MediaCard } from './MediaCard.svelte';
 export { default as Menu } from './Menu.svelte';
 export { default as Title } from './Title.svelte';
+export { default as MobileFeedCard } from './MobileFeedCard.svelte';
