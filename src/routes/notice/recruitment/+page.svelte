@@ -18,10 +18,10 @@
             <!-- 모집 일정 -->
             <div class="w-full max-w-sm mb-8 space-y-2">
                 <div class="bg-[#252525] border-[#AE1F1F] border-4 px-4 py-3 rounded text-sm">
-                    서류 모집 (~9/7)
+                    서류 모집 (~9/10)
                 </div>
                 <div class="bg-[#AE1F1F] px-4 py-3 rounded text-sm">
-                    합격자 발표 (9/?)
+                    합격자 발표 (9/11)
                 </div>
                 
             </div>
@@ -43,9 +43,9 @@
            
             <div class="flex w-full mb-8 self-start justify-center">
                 <div class="flex bg-[#252525] w-[474px] h-[54px] border-[#AE1F1F] border-4 rounded-[4px]">
-                    <span class="text-[24px] pt-1.25 pl-5 font-pretendard-variable">서류 모집 (~9/7)</span>
+                    <span class="text-[24px] pt-1.25 pl-5 font-pretendard-variable">서류 모집 (~9/10)</span>
                 </div>
-                <div class="ml-3.5 text-center pt-1 text-[24px] bg-[#AE1F1F] border-[5px] border-[#AE1F1F] rounded-[8px] w-[225px] h-[54px]">합격자 발표 (9/?)</div>
+                <div class="ml-3.5 text-center pt-1 text-[24px] bg-[#AE1F1F] border-[5px] border-[#AE1F1F] rounded-[8px] w-[225px] h-[54px]">합격자 발표 (9/11)</div>
             </div>
             <a href="/" class="flex h-[54px] w-[187px] items-center justify-center rounded-[50px] bg-[#AE1F1F] text-[24px]">지원하기</a>
    
