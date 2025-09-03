@@ -24,14 +24,13 @@
         };
     });
     
-    const mobileMenuIcon = "https://png.pngtree.com/element_our/20190602/ourmid/pngtree-white-laptop-illustration-image_1412935.jpg"
 
 </script>
 
 <header>
-    <nav class="relative z-20 flex h-[70px] items-center bg-black px-7 desktop:px-11.25">
+    <nav class="relative z-20 flex h-[70px] items-center bg-black px-9 desktop:px-11.25">
         <div class="flex items-center">
-            <a href="/" target="_self" class="hidden desktop:block w-[36px] flex-shrink-0">
+            <a href="/" target="_self" class="w-[36px] flex-shrink-0">
                 <img src={SogangLogo} alt="Logo">
             </a>
             <a href="/" aria-label="Main Menu" class="flex h-full flex-col justify-center ml-2">
@@ -40,7 +39,7 @@
             </a>
         </div>
         
-        <NavigationBar />
+        <NavigationBar/>
         
         <!-- Mobile Menu Icon -->
         {#if $isMobileMenuOpen}

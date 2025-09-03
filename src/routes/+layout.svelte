@@ -3,9 +3,13 @@
     import "../app.css";
     import { page } from '$app/state'; 
 
-    import { Header } from '$lib';
-    import { Footer } from '$lib';
-  </script>
+    import Header from "../lib/components/Header.svelte"
+    import Footer from "../lib/components/Footer.svelte"
+  
+    import { isMobileMenuOpen } from '$lib/Header.js';
+ 
+ </script>
+
 
 <div class="font-[Pretendard_Variable]">
 <Header />

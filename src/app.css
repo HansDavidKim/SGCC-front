@@ -33,6 +33,7 @@ http://scripts.sil.org/OFL
   --font-pretendard-variable: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --breakpoint-desktop: 896px;
   --breakpoint-tablet: 640px;
+  --breakpoint-vertical-tablet: 520px;
 }
 
 @layer base {

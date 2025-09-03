@@ -12,9 +12,9 @@
             name: 'About Us',
             color: '#AE1F1F',
             subItems: [
-                { name: '인사말', path: '/aboutus/' },
-                { name: '활동/행사', path: '/aboutus/activity' },
-                { name: 'SNS', path: '/aboutus/SNS' },
+                { name: '인사말', path: '/about-us/welcome' },
+                { name: '활동/행사', path: '/about-us/activity' },
+                { name: 'SNS', path: '/about-us/SNS' },
             ],
         },
         {
@@ -24,7 +24,7 @@
                 { name: '공지', path: '/notice/announcements' },
                 { name: '동아리방', path: '/notice/' },
                 { name: '달력', path: '/notice/calendar' },
-                { name: '모집 안내', path: '/notice/boshuu' },
+                { name: '모집 안내', path: '/notice/recruitment' },
                 { name: '규정집', path: '/notice/rule' },
             ],
         },
