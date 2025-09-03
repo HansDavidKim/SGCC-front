@@ -85,7 +85,7 @@
       함께 프로젝트를 만들고, 서로의 아이디어를 나누며 성장해나갈 여러분을 기다립니다.
     </p>
     <img class="w-[calc(90vw)] desktop:max-w-[668px] aspect-[16/9] bg-gray-300 object-contain" src="https://give.sogang.ac.kr/resources/_Img/content/campus-map.jpg" alt="포스터">
-    <a href="notice/recruitment" class="mt-5 desktop:mt-13 flex h-[44px] w-[132px] items-center justify-center rounded-full bg-[#AE1F1F] text-[24px] font-normal text-white">지원하기</a>
+    <a href="/notice/recruitment" class="mt-5 desktop:mt-13 flex h-[44px] w-[132px] items-center justify-center rounded-full bg-[#AE1F1F] text-[24px] font-normal text-white">지원하기</a>
   </div>
   
   <footer class="snap-end"><Footer /></footer>
