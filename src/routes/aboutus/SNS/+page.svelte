@@ -1,5 +1,5 @@
 <script lang="ts">
-
+  import SGCCLogo from '$lib/assets/images/SGCC-logo.jpg';  
 </script>
 
 <main>
@@ -36,7 +36,7 @@
       >
         <div class="flex items-center justify-between mb-4">
           <img 
-            src="/src/lib/assets/images/SGCC-logo.jpg" 
+            src="{SGCCLogo}" 
             alt="SGCC Logo" 
             class="w-20 h-20 rounded-full object-cover mr-5 border-2 border-gray-200 p-0.5"
           >
@@ -66,7 +66,7 @@
       >
         <div class="relative mx-auto mb-5 w-max">
           <img
-            src="/src/lib/assets/images/SGCC-logo.jpg"
+            src="{SGCCLogo}"
             alt="SGCC Logo"
             class="h-36 w-36 rounded-full border-2 border-slate-700 object-cover"
           />
