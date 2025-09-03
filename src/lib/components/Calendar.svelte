@@ -12,6 +12,10 @@
     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
     const CALENDAR_ID = import.meta.env.VITE_CALENDAR_ID;
     const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&singleEvents=true&orderBy=startTime`;
+    
+    let width = $state(window.innerWidth);
+    let isMobile = $derived(width < 640);
+    let eventGap = $derived(isMobile ? 1 : 1.5);
 
     let currentDate = new Date(new Date().setHours(0, 0, 0, 0));
     let date = $state(new Date());
@@ -61,14 +65,16 @@
     }
 </script>
 
+<svelte:window bind:innerWidth={width} />
+
 <div class="max-w-5xl mx-auto text-white">
     <div class="grid grid-cols-3 items-end">
-        <select value={year} onchange={handleYearChange} class="justify-self-start bg-black text-white border border-white rounded px-2 py-2 m-6 focus:outline-none">
+        <select value={year} onchange={handleYearChange} class="justify-self-start bg-black text-white border border-white rounded px-2 py-2 m-6 focus:outline-none text-xs tablet:text-lg">
             {#each dropdownYears as y}
                 <option value={y}>{y}년</option>
             {/each}
         </select>
-        <h2 class="justify-center mx-auto text-center text-4xl py-12 font-bold">
+        <h2 class="flex items-center justify-center mx-auto text-center text-3xl tablet:text-4xl py-12 font-bold">
             <button onclick={prevMonth} class="cursor-pointer">&lt;</button>
                 &nbsp;{month}월&nbsp;
             <button onclick={nextMonth} class="cursor-pointer">/&gt;</button>
@@ -91,13 +97,12 @@
         {/each}
         {#each processedEvents as event}
 			<div
-				class="absolute text-white text-xs text-left font-semibold bg-red-800 rounded p-1 mx-1 overflow-hidden whitespace-nowrap text-ellipsis"
+				class="flex items-center absolute text-white text-xs text-left font-semibold bg-red-800 rounded p-1 mx-1 overflow-hidden whitespace-nowrap text-ellipsis h-4 tablet:h-6 py-auto"
 				style="
                     grid-row: {event.row};
                     left: calc((100% / 7) * ({event.col - 1}));
                     width: calc((100% / 7) * {event.span});
-                    margin-top: {2.5 + event.lane * 1.5}rem;
-                    height: 1.4rem;
+                    margin-top: {2.5 + event.lane * eventGap}rem;
                 "
 			>
 				{event.summary}
