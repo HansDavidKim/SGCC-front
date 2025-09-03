@@ -38,7 +38,7 @@ http://scripts.sil.org/OFL
 
 @layer base {
   
-  h1, h2, h3, span {
+  h1, h2, h3, span, a {
     font-family: var(--font-sogang);
   }
 
@@ -54,6 +54,14 @@ http://scripts.sil.org/OFL
   }
   .hide-scrollbar::-webkit-scrollbar {
     display: none;  /* Chrome, Safari, Opera*/
+  }
+  .neon-text {
+  color: #fff;
+  text-shadow: 
+    0 0 5px #FFFFFF,
+    0 0 10px #FFFFFF,
+    0 0 20px #FFFFFF,
+    0 0 40px #FFFFFF;
   }
 }
 

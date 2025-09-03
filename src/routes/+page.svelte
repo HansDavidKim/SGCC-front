@@ -13,7 +13,7 @@
 
 </script>
 
-<main class="h-[calc(100vh-70px)] overflow-x-hidden overflow-y-scroll snap-y snap-mandatory">
+<main class="h-[calc(100vh-70px)] overflow-x-hidden overflow-y-scroll desktop:snap-y snap-mandatory">
   <div class="flex h-full snap-start">
     <ImageSlider/>
   </div>
