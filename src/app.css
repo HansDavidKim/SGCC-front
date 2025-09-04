@@ -33,7 +33,6 @@ http://scripts.sil.org/OFL
   --font-pretendard-variable: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --breakpoint-desktop: 896px;
   --breakpoint-tablet: 640px;
-  --breakpoint-vertical-tablet: 520px;
 }
 
 @layer base {
@@ -55,13 +54,25 @@ http://scripts.sil.org/OFL
   .hide-scrollbar::-webkit-scrollbar {
     display: none;  /* Chrome, Safari, Opera*/
   }
+
   .neon-text {
-  color: #fff;
-  text-shadow: 
-    0 0 5px #FFFFFF,
-    0 0 10px #FFFFFF,
-    0 0 20px #FFFFFF,
-    0 0 40px #FFFFFF;
+    color: #fff;
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2),
+      0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 80px rgba(255, 255, 255, 0.05);
+  }
+
+  .hover\:neon-text:hover {
+    color: #fff;
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2),
+      0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 80px rgba(255, 255, 255, 0.05);
   }
 }
 
