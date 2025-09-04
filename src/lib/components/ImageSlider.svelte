@@ -1,11 +1,16 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 
+  	import MainImage1 from '$lib/assets/images/main_top1.jpg'
+	import MainImage2 from '$lib/assets/images/main_top2.jpg'
+	import MainImage3 from '$lib/assets/images/main_top3.jpg'
+	import MainImage4 from '$lib/assets/images/main_top4.jpg'
+
 	const images: string[] = [
-		"https://images.pexels.com/photos/259526/pexels-photo-259526.jpeg?cs=srgb&dl=pexels-pixabay-259526.jpg&fm=jpg",
-		"https://www.shutterstock.com/image-photo/ultra-wide-photo-mountains-river-260nw-1755037052.jpg",
-		"https://klec.sogang.ac.kr/fro_end_kor/img/slide-img01.jpg",
-		"https://news.kbs.co.kr/data/news/2024/04/17/20240417_Gz5cv4.jpg",
+		MainImage1,
+		MainImage2,
+		MainImage3,
+		MainImage4,
 	];
 
 	let currentImageIndex: number = 0;
@@ -46,9 +51,11 @@
 				out:fade={{ duration: 200 }}/>
 		{/key}
 	</div>
-	
+
+	<h2 class="absolute text-center top-[calc(30vh)] w-full text-[35px] desktop:text-[64px] text-white">Sogang Computer Club</h2>
+	<h3 class="absolute text-center top-[calc(30vh+200px)] w-full text-[35px] dekstop:text-[20px] text-white">서강대학교 중앙 컴퓨터 동아리 SGCC</h3>
 	<button
-		class="absolute top-1/2 h-full transform -translate-y-1/2 focus:outline-none hover:[&>*]:stroke-gray-500 hover:bg-gradient-to-r from-gray-800/30 to-transparent"
+		class="absolute hidden desktop:block top-1/2 h-full transform -translate-y-1/2 focus:outline-none hover:[&>*]:stroke-gray-500 hover:bg-gradient-to-r from-gray-800/30 to-transparent"
 		on:click={prevImage}
 		aria-label="prev Image">
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-15 stroke-gray-200">
@@ -57,7 +64,7 @@
 	</button>
 	
 	<button
-		class="absolute top-1/2 right-0 h-full transform -translate-y-1/2 focus:outline-none hover:[&>*]:stroke-gray-500 hover:bg-gradient-to-l from-gray-800/30 to-transparent"
+		class="absolute hidden desktop:block top-1/2 right-0 h-full transform -translate-y-1/2 focus:outline-none hover:[&>*]:stroke-gray-500 hover:bg-gradient-to-l from-gray-800/30 to-transparent"
 		on:click={nextImage}
 		aria-label="next Image">
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-15 stroke-gray-200">

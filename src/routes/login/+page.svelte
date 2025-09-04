@@ -1,4 +1,5 @@
 <script lang="ts">
+    import SGCC_cute from '$lib/assets/images/sgcc-cute.png'
 </script>
 
 <main>
@@ -12,6 +13,7 @@
         <!-- 로그인 폼 -->
         <div class="flex flex-col items-center mt-[calc(15vh)] relative z-10 w-full max-w-sm bg-[#252525] rounded-[20px] py-8">
             <!-- 로고/제목 -->
+            <img alt="SGCC Symbol" src={SGCC_cute} class="absolute w-[80px] h-[80px] mb-4">
             <h1 class="text-[25px] font-normal mb-9">Login</h1>
             
             <!-- 이메일 입력 -->
@@ -50,9 +52,9 @@
         <div class="absolute w-full h-full opacity-50 bg-no-repeat bg-cover bg-left-top"  
         style="background-image: url('');">
         </div>
-        
+
         <div class="flex flex-col justify-between items-center absolute top-[129px] w-[616px] h-[546px] bg-[#252525] rounded-[30px] py-9">
-           
+            
             <!-- 상단 섹션 -->
             <div class="flex flex-col items-center w-full">
                 <h1 class="text-center text-[40px] font-normal mb-14">Login</h1>
@@ -78,5 +80,6 @@
                 <a href="/sign-up" class="text-[14px] text-white font-normal">회원가입</a>
             </div>
         </div>
+        <img alt="SGCC Symbol" src={SGCC_cute} class="absolute top-[65px] w-[166px] left-[calc(50vw-350px)] -rotate-9 mb-4">
     </div>
 </main>

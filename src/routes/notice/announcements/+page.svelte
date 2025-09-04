@@ -76,7 +76,7 @@
         on:mouseleave={onMouseUp}
         on:mousemove={onMouseMove}>
         {#each cards as card}
-          <div class="w-[calc(90vw)] desktop:w-[559px] desktop:h-[774px] flex-shrink-0 rounded-2xl {card.bgColor} desktop:px-13.5 px-7 desktop:py-9 py-5 text-white">
+          <div class="w-[calc(90vw)] desktop:w-[559px] desktop:h-[499px] flex-shrink-0 rounded-2xl {card.bgColor} desktop:px-13.5 px-7 desktop:py-9 py-5 text-white">
             <h3 class="mb-4 desktop:text-[36px] text-[30px]">
               {card.title}
               {#if card.subtitle}

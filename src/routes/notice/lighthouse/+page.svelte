@@ -1,5 +1,9 @@
 <script lang="ts"> 
     import { Title } from '$lib';
+
+    import RecruitingPoster from '$lib/assets/images/25-2 recruiting poster.png'
+    import location from '$lib/assets/images/location.png'
+    import room from '$lib/assets/images/room.jpg'
 </script>
 
 <main>
@@ -16,23 +20,17 @@
 
         <!-- Desktop -->
         <div class="hidden mb-24 desktop:flex w-full gap-x-10 px-60 mt-8">
-            <div class="h-74 w-74 flex-shrink-0 bg-[#D9D9D9]">
-                
-            </div>
+            <img alt="동방 사진!" src={room} class="h-74 w-74 flex-shrink-0 bg-[#D9D9D9] text-center">
 
-            <div class="h-74 w-full self-auto bg-[#D9D9D9]">
-
-            </div>
+            <img alt="location" src={location} class="h-74 w-full self-auto bg-[#D9D9D9] object-cover object-right">
         </div>
 
         <!-- Mobile -->
         <div class="items-center desktop:hidden mb-18 flex flex-col w-full gap-x-10 mt-4.5">
-            <div class="w-full max-w-[296px] aspect-square bg-[#D9D9D9]">
-                
-            </div>
-
-            <div class="w-full max-w-[296px] aspect-[296/75] mt-9 self-auto bg-[#D9D9D9]">
-
+            <img alt="location" src={location} class="w-full max-w-[296px] aspect-square bg-[#D9D9D9] object-cover object-right">
+        
+            <div class="w-full max-w-[296px] aspect-[296/75] mt-9 self-auto bg-[#D9D9D9] text-center">
+                동방 사진!
             </div>
         </div>
 
@@ -43,9 +41,8 @@
                 <h3 class="text-[36px]">신입부원 모집</h3>
                 <h3 class="pl-2.25 pb-1 text-[20px]">2025 09월 ~</h3>
             </div>
-            <div class="mb-17 h-[521px] w-[817px] bg-[#D9D9D9]">
+            <img alt="Recruiting Poster" src={RecruitingPoster} class="mb-17 h-[521px] bg-[#D9D9D9]">
 
-            </div>
             <a href="/" class="flex h-[70px] w-[234px] items-center justify-center rounded-[50px] bg-[#AE1F1F] text-[32px]">지원하기</a>
         </div>
 

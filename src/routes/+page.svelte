@@ -1,23 +1,27 @@
 <script lang="ts">
   import ImageSlider from '$lib/components/ImageSlider.svelte'
   import Footer from '$lib/components/Footer.svelte'
+
+  import mobile_slider1 from '$lib/assets/images/mobile_slider_1.jpg'
+  import mobile_slider2 from '$lib/assets/images/mobile_slider_2.jpg'
+  import mobile_slider3 from '$lib/assets/images/mobile_slider_3.jpg'
   
   const images: string[] = [
-    "https://images.pexels.com/photos/259526/pexels-photo-259526.jpeg?cs=srgb&dl=pexels-pixabay-259526.jpg&fm=jpg",
-    "https://www.shutterstock.com/image-photo/ultra-wide-photo-mountains-river-260nw-1755037052.jpg", 
-    "https://klec.sogang.ac.kr/fro_end_kor/img/slide-img01.jpg",
-    "https://news.kbs.co.kr/data/news/2024/04/17/20240417_Gz5cv4.jpg",
+    mobile_slider1,
+    mobile_slider2,
+    mobile_slider3
   ];
     // 고정된 폭 (% 단위)
-    const fixedWidth = 30;
+  const fixedWidth = 30;
 
 </script>
 
-<main class="h-[calc(100vh-70px)] overflow-x-hidden overflow-y-scroll desktop:snap-y snap-mandatory">
-  <div class="flex h-full snap-start">
+<main class="h-[calc(100vh-70px)] overflow-x-hidden">
+  <div class="flex h-full">
     <ImageSlider/>
   </div>
-  <div class="relative desktop:justify-start justify-between flex h-full min-h-[512px] flex-col items-center bg-black desktop:bg-[#252525] pt-[calc(10vh)] px-5 desktop:pt-8 snap-start text-white">
+  <div class="relative desktop:justify-start justify-between flex h-full min-h-[512px] flex-col items-center bg-black desktop:bg-[#252525] pt-[calc(10vh)] px-5 desktop:pt-8 text-white">
+    
     <div style="margin-bottom: clamp(1.5rem, 2rem, 2.5rem)" class="flex items-center space-x-7">
       <h2 class="text-[50px] font-[SogangUniversity] font-normal">Intro:</h2>
       <h2 class="text-[64px] font-sogang font-normal">SGCC</h2>
@@ -27,14 +31,16 @@
       python, C언어 등 기본 프로그래밍 언어 콘서트뿐만 아니라, 유니티, 언리얼 엔진, 웹 등 다양한 분야에서 스터디를 진행하며<br>
       부원의 능력을 끌어 올리는 것을 목표로 활동하고 있습니다. 
     </p>
+
+    <!-- Youtube Video -->
     <iframe class="mb-5 px-10 desktop:mt-4.25 aspect-video h-[calc(92vw*9/16)] desktop:h-[523px]"
-      src="https://www.youtube.com/embed/o4HPzbwx_Xk"
-      title="Test" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      src="https://www.youtube.com/embed/U6bC31Hg2ow"
+      title="[SGCC 슬기로운 인디 생활 3기] Uncolored 인 게임 플레이 영상" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   
-  <div class="relative flex h-full min-h-[930px] desktop:min-h-[1200px] flex-col items-center bg-black px-3 py-[calc(5vh)] desktop:py-28.5 snap-start text-white">
+  <div class="relative flex h-full min-h-[930px] desktop:min-h-[1700px] flex-col items-center bg-black px-3 py-[calc(5vh)] desktop:py-28.5 text-white">
       <h2 class="hidden desktop:block mb-11.5 text-center text-[40px] font-normal">"초보자들을 위한 사다리"</h2>
       <p class="mb-[calc(5vh)] desktop:mb-12 text-left desktop:text-center text-[20px] font-normal leading-13">
         SGCC는 초심자 분들의 프로그래밍 진입 장벽을 낮추기 위해 노력합니다.<br class="hidden desktop:block">
@@ -75,10 +81,10 @@
     </div>
 
     <!-- 더 알아보기 버튼 -->
-    <a href="/about-us/activity" class="mt-1 desktop:mt-17.5 flex h-[45px] w-[188px] items-center justify-center rounded-full bg-[#AE1F1F] text-[32px] font-normal">더 알아보기</a>
+    <a href="/about-us/activity" class="mt-1 desktop:mt-17.5 flex h-[45px] w-[188px] items-center justify-center rounded-full bg-[#AE1F1F] text-[24px] font-normal">더 알아보기</a>
   </div>
   
-  <div class="relative flex h-full flex-col items-center bg-[#252525] px-3 py-12.5 snap-start text-white">
+  <div class="relative flex h-full flex-col items-center bg-[#252525] px-3 py-12.5 text-white">
     <h2 class="text-center text-[50px] font-normal">RECRUITING</h2>
     <p class="my-4.25 desktop:text-center text-[20px] leading-[35px] desktop:text-[24px] font-normal desktop:leading-[40px]">
       컴퓨터와 기술을 좋아하고, 새로운 것을 배우는 데 즐거움을 느끼는 사람을 찾습니다.<br>
@@ -87,8 +93,8 @@
     <img class="w-[calc(90vw)] desktop:max-w-[668px] aspect-[16/9] bg-gray-300 object-contain" src="https://give.sogang.ac.kr/resources/_Img/content/campus-map.jpg" alt="포스터">
     <a href="/notice/recruitment" class="mt-5 desktop:mt-13 flex h-[44px] w-[132px] items-center justify-center rounded-full bg-[#AE1F1F] text-[24px] font-normal text-white">지원하기</a>
   </div>
-  
-  <footer class="snap-end"><Footer /></footer>
+
+  <footer><Footer/></footer>
 </main>
 
 <style>

@@ -1,14 +1,14 @@
 <script lang="ts">
-
+  import welcomeImage from '$lib/assets/images/welcome_image.jpg'
 
 </script>
 
 <main>
   <div class="relative flex min-h-201 desktop:h-322 flex-col items-center bg-black desktop:py-29.5 py-12 text-white">
     <h2 class="mb-17 text-center desktop:text-[50px] text-[35px] font-normal">인사말</h2>
-    <div class="mb-7.5 shrink-0 h-[130px] tablet:h-[346px] aspect-[226/130] desktop: bg-white">
+    <!-- aspect-[226/130] h-[130px] h-[346px]-->
+    <img alt="welcome" src={welcomeImage} class="mb-7.5 shrink-0 h-[346px] tablet:h-[476px] desktop:bg-white">
       
-    </div>
 
     <p class="text-left tablet:text-center px-[calc(10vw)] text-[16px] desktop:text-[20px] font-normal leading-[29px] desktop:leading-[40px]">
       SGCC는 1982년에 창립된 "컴퓨터"라는 공통 관심사를 가진 사람들이 모인<br>

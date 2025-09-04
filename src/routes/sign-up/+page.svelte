@@ -1,4 +1,5 @@
 <script lang="ts">
+    import SGCC_idle from '$lib/assets/images/sgcc-idle.png'
 </script>
 
 <main>
@@ -104,5 +105,7 @@
                 </button>
             </div>
         </div>
+        <img alt="SGCC Symbol" src={SGCC_idle} class="absolute top-[52px] w-[166px] left-[calc(50vw+252px)] -rotate-9 mb-4">
+    
     </div>
 </main>

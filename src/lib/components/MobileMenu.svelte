@@ -22,10 +22,9 @@
             color: '#AE1F1F',
             subItems: [
                 { name: '공지', path: '/notice/announcements' },
-                { name: '동아리방', path: '/notice/' },
+                { name: '동아리방', path: '/notice/lighthouse' },
                 { name: '달력', path: '/notice/calendar' },
                 { name: '모집 안내', path: '/notice/recruitment' },
-                { name: '규정집', path: '/notice/rule' },
             ],
         },
         {
