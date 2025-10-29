@@ -84,7 +84,7 @@
     <a href="/about-us/activity" class="mt-1 desktop:mt-17.5 flex h-[45px] w-[188px] items-center justify-center rounded-full bg-[#AE1F1F] text-[24px] font-normal">더 알아보기</a>
   </div>
   
-  <div class="relative flex h-full flex-col items-center bg-[#252525] px-3 py-12.5 text-white">
+  <div class="relative flex h-full min-h-[756px] flex-col items-center bg-[#252525] px-3 py-12.5 text-white">
     <h2 class="text-center text-[50px] font-normal">RECRUITING</h2>
     <p class="my-4.25 desktop:text-center text-[20px] leading-[35px] desktop:text-[24px] font-normal desktop:leading-[40px]">
       컴퓨터와 기술을 좋아하고, 새로운 것을 배우는 데 즐거움을 느끼는 사람을 찾습니다.<br>
